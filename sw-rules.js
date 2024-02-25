@@ -1,6 +1,6 @@
 module.exports.config = {
     serviceWorker: {
-        escape: 0,
+        escape: 19,
         cacheName: 'LCTTBlogCache'
     },
     register: {
@@ -78,12 +78,12 @@ module.exports.cacheRules = {
             "jsd.cdn.zzko.cn",
             "jsd.onmicrosoft.cn",
             "sdk.51.la",
-            "npm.elemecdn.com",
-            "cdn.cbd.int",
-            "cdn.jsdelivr.net",
-            "fastly.jsdelivr.net",
-            "lynx-static.s3.bitiful.net",
-            "lynx-img.s3.bitiful.net",
+            "mirrors.sustech.edu.cn",
+            "s4.zstatic.net",
+            // "npm.elemecdn.com",
+            // "cdn.cbd.int",
+            // "cdn.jsdelivr.net",
+            // "fastly.jsdelivr.net",
             "s2.hdslb.com",
             // "fonts.googleapis.com",
         ].includes(url.host) && url.pathname.match(/\.(js|css|woff2|woff|ttf|json|png|jpg|webp)$/), // CDN 缓存

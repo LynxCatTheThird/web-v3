@@ -154,53 +154,6 @@ swpp:
   warn_level: 1
   # 检查版本的 URL，不能以 '/' 结尾
   # npm_url: 'https://registry.npmmirror.com'
-# MMedia
-mmedia:
-  video:
-    default:
-      width: 100%
-  meting:
-    js: https://cdn.staticfile.org/meting/2.0.1/Meting.min.js
-  aplayer:
-    js: https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js
-    css: https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css
-  dplayer:
-    js: https://cdn.staticfile.org/dplayer/1.27.1/DPlayer.min.js
-    hls_js: https://cdn.staticfile.org/hls.js/1.4.10/hls.min.js
-    dash_js: https://jsd.onmicrosoft.cn/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn.staticfile.org/shaka-player/4.3.8/shaka-player.compiled.min.js
-    flv_js: https://cdn.staticfile.org/flv.js/1.6.2/flv.min.js
-    webtorrent_js: https://jsd.onmicrosoft.cn/npm/webtorrent/webtorrent.min.js
-  artplayer:
-    js: https://cdn.staticfile.org/artplayer/5.0.9/artplayer.min.js
-    hls_js: https://cdn.staticfile.org/hls.js/1.4.10/hls.min.js
-    dash_js: https://jsd.onmicrosoft.cn/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn.staticfile.org/shaka-player/4.3.8/shaka-player.compiled.min.js
-    flv_js: https://cdn.staticfile.org/flv.js/1.6.2/flv.min.js
-    webtorrent_js: https://jsd.onmicrosoft.cn/npm/webtorrent/webtorrent.min.js
-    default:
-      style: width:100%;aspect-ratio:16/9;center
-      contents:
-        autoSize: false
-        autoMini: false
-        fullscreen: true
-        fullscreenWeb: true
-        flip: true
-        playbackRate: true
-        setting: true
-        aspectRatio: true
-        screenshot: true
-  bilibili:
-    default:
-      page: 1
-      danmaku: true
-      allowfullscreen: allowfullscreen
-      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
-      width: 100%
-      margin: auto
-  xigua:
-    default:
-      autoplay: false
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
 tag_plugins:
@@ -210,11 +163,11 @@ tag_plugins:
   link:
     placeholder: /img/link.png #link_card标签默认的图标图片
   CDN:
-    anima: https://lynx-static.s3.bitiful.net/css/hexo-butterfly-tag-plugins-plus-lite-1.0.1/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    jquery: https:///cdn.staticfile.net/jquery/3.7.1/jquery.min.js #issues标签依赖
-    issues: https://lynx-static.s3.bitiful.net/css/hexo-butterfly-tag-plugins-plus-lite-1.0.1/lib/assets/issues.js #issues标签依赖
-    carousel: https://lynx-static.s3.bitiful.net/css/hexo-butterfly-tag-plugins-plus-lite-1.0.1/lib/assets/carousel-touch.js
-    tag_plugins_css: https://lynx-static.s3.bitiful.net/css/hexo-butterfly-tag-plugins-plus-lite-1.0.1/lib/tag_plugins.css
+    anima: https://s4.zstatic.net/npm/hexo-butterfly-tag-plugins-plus-lite@1.0.1/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    jquery: https://s4.zstatic.net/ajax/libs/jquery/3.7.1/jquery.min.js #issues标签依赖
+    issues: https://s4.zstatic.net/npm/hexo-butterfly-tag-plugins-plus-lite@1.0.1/lib/assets/issues.js #issues标签依赖
+    carousel: https://s4.zstatic.net/npm/hexo-butterfly-tag-plugins-plus-lite@1.0.1/lib/assets/carousel-touch.js
+    tag_plugins_css: https://s4.zstatic.net/npm/hexo-butterfly-tag-plugins-plus-lite@1.0.1/lib/tag_plugins.css
 wowjs:
   enable: true #控制动画开关。true是打开，false是关闭
   priority: 10 #过滤器优先级
@@ -230,9 +183,9 @@ wowjs:
     #   style: animate__zoomIn
     - class: no_element
       style: animate__zoomIn
-  animate_css: https://lynx-static.s3.bitiful.net/css/hexo-butterfly-wowjs-1.0.5/lib/animate.min.css
-  wow_js: https://lynx-static.s3.bitiful.net/css/hexo-butterfly-wowjs-1.0.5/lib/wow.min.js
-  wow_init_js: https://lynx-static.s3.bitiful.net/css/hexo-butterfly-wowjs-1.0.5/lib/wow_init.js
+  animate_css: https://s4.zstatic.net/npm/hexo-butterfly-wowjs@1.0.5/lib/animate.min.css
+  wow_js: https://s4.zstatic.net/npm/hexo-butterfly-wowjs@1.0.5/lib/wow.min.js
+  wow_init_js: https://s4.zstatic.net/npm/hexo-butterfly-wowjs@1.0.5/lib/wow_init.js
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

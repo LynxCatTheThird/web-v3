@@ -926,8 +926,7 @@ inject:
     - <script>LA.init({id:"3FHtwMLrNsmeb3xo",ck:"3FHtwMLrNsmeb3xo",autoTrack:true})</script>
     - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
     - <script>new LingQue.Monitor().init({id:"3FIVcC1kwtgWSdW3",sendSuspicious:true});</script>
-    # - <script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"3FHtwMLrNsmeb3xo",ck:"3FHtwMLrNsmeb3xo",autoTrack:true});</script>
-    # - <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" />
+    # - <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" />
     # - <link rel="stylesheet" href="https://s2.hdslb.com/bfs/static/jinkela/long/font/medium.css">
     # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap">
   bottom:
@@ -951,8 +950,8 @@ CDN:
   version: false
 
   # Custom format
-  # custom_format: https://cdn.bootcdn.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.staticfile.net/${cdnjs_name}/${version}/${min_cdnjs_file}
+  # custom_format: https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
+  custom_format: https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
 
   option:
     # main_css:
@@ -972,15 +971,15 @@ CDN:
     # valine:
     # disqusjs:
     # disqusjs_css:
-    twikoo: https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js
+    twikoo: https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js
     # waline_js:
     # waline_css:
     # giscus:
     # sharejs:
     # sharejs_css:
     # mathjax:
-    katex: https://lynx-static.s3.bitiful.net/css/katex-0.16.9/dist/katex.min.css
-    katex_copytex: https://lynx-static.s3.bitiful.net/css/katex-0.16.9/dist/contrib/copy-tex.min.js
+    # katex:
+    # katex_copytex:
     # mermaid:
     # canvas_ribbon:
     # canvas_fluttering_ribbon:
@@ -998,16 +997,16 @@ CDN:
     # fireworks:
     # click_heart:
     # ClickShowText:
-    fontawesome: https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.1/css/all.min.css
+    fontawesome: https://s4.zstatic.net/ajax/libs/font-awesome/6.5.1/css/all.min.css
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
-    aplayer_css: https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.css
-    aplayer_js: https://cdn.staticfile.net/aplayer/1.10.1/APlayer.min.js
-    meting_js: https://cdn.staticfile.net/meting/2.0.1/Meting.min.js
+    aplayer_css: https://s4.zstatic.net/ajax/libs/aplayer/1.10.1/APlayer.min.css
+    aplayer_js: https://s4.zstatic.net/ajax/libs/aplayer/1.10.1/APlayer.min.js
+    meting_js: https://s4.zstatic.net/ajax/libs/meting/2.0.1/Meting.min.js
     # prismjs_js:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
-    # busuanzi: https://npm.elemecdn.com/penndu@1.0.0/bsz.js
+    # busuanzi: https://cn.vercount.one/js
     # abcjs_basic_js:
