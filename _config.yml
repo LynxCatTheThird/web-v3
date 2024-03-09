@@ -154,6 +154,26 @@ swpp:
   warn_level: 1
   # 检查版本的 URL，不能以 '/' 结尾
   # npm_url: 'https://registry.npmmirror.com'
+# Minify
+uglify:
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - "*.min.js"
+clean_css:
+  exclude:
+    - "*.min.css"
+html_minifier:
+  collapseBooleanAttributes: true
+  collapseWhitespace: true
+  ignoreCustomComments: [!!js/regexp /^\s*more/]
+  removeComments: true
+  removeEmptyAttributes: true
+  removeScriptTypeAttributes: true
+  removeStyleLinkTypeAttributes: true
+  minifyJS: true
+  minifyCSS: true
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
 tag_plugins:
