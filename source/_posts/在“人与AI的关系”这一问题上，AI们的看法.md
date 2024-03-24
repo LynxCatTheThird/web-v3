@@ -1,8 +1,7 @@
 ---
 title: 在“人与 AI 的关系”这一问题上，AI 们的看法
-katex: false
-cover: >-
-  https://s2.hdslb.com/bfs/article/6e82b33c9eeddcb17103790d181dee1fdcec825c.jpg@1e_1c.webp
+date: 2023-07-31 17:46:54
+updated: 2024-01-23 17:46:54
 categories:
   - 科学与技术
   - 计算机
@@ -10,10 +9,10 @@ categories:
 tags:
   - AI
   - 社会
+cover: >-
+  https://s2.hdslb.com/bfs/article/6e82b33c9eeddcb17103790d181dee1fdcec825c.jpg@1e_1c.webp
 description: AI：你这想法挺危险啊，我都不敢这么想……
 abbrlink: 5e83efa
-date: 2023-07-31 17:46:54
-updated: 2024-01-23 17:46:54
 ---
 
 # Pi

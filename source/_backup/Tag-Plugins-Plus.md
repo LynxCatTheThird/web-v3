@@ -1,17 +1,15 @@
 ---
 title: 标签外挂测试
-cover: >-
-  https://s2.hdslb.com/bfs/article/e4bb9f697983d94cd838ee6fda074c23b489052e.png@1e_1c.webp
-katex: false
+date: 2022-12-03 06:18:18
+updated: 2024-02-02 18:33:24
 categories:
   - 科学与技术
   - 计算机
   - 网站搭建
 tags: 网站搭建
+cover: https://s2.hdslb.com/bfs/article/e4bb9f697983d94cd838ee6fda074c23b489052e.png@1e_1c.webp
 description: 包括额外安装的标签外挂
 abbrlink: 533f6a6
-date: 2022-12-03 06:18:18
-updated: 2024-02-02 18:33:24
 ---
 
 # 额外安装的标签外挂

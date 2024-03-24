@@ -7,11 +7,11 @@
       descr: Here's an argvchs...
     - name: 山岳库博
       link: https://kmar.top/
-      avatar: https://npm.elemecdn.com/npm/@kmar/fonts/avatar/own.png
+      avatar: https://s2.hdslb.com/bfs/article/706a499eeda103821da11f127d782b831352440272.png@1e_1c.webp
       descr: 开发学习启发性二刺螈
     - name: HiPeach
       link: https://opeach.cn/
-      avatar: https://opeach.cn/media/avatar.webp
+      avatar: https://npm.elemecdn.com/opicture@1.0.0/main/avatar.webp
       descr: 妙不可言
     - name: Shine
       link: https://blog.shineyu.cn/
@@ -21,7 +21,7 @@
       link: https://blog.marcus233.top/
       avatar: https://img01.anheyu.com/useruploads/8/2022/12/15/639adf5b8806a.png
       descr: 人间值得，未来可期
-    - name: 蓝幽呀
-      link: https://lanyou.me/
-      avatar: https://lanyou.me/image/2.jpg
-      descr: 生活
+    # - name: 蓝幽呀
+    #   link: https://lanyou.me/
+    #   avatar: https://lanyou.me/image/2.jpg
+    #   descr: 生活

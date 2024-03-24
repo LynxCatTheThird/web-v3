@@ -48,13 +48,11 @@ module.exports.config = {
         js: [],
         stable: [],
         replacer: srcUrl => {
-            if (srcUrl.startsWith('https://cdn.jsdelivr.net/npm/')) {
+            if (srcUrl.startsWith('https://cdn.jsdelivr.net/')) {
                 const pathname = new URL(srcUrl).pathname;
                 return [
                     srcUrl,
-                    `https://cdn.cbd.int/${pathname}`,
-                    `https://npm.elemecdn.com/${pathname}`,
-                    `https://fastly.jsdelivr.net/npm/${pathname}`,
+                    `https://jsd.cdn.zzko.cn/${pathname}`,
                 ];
             } else {
                 return srcUrl;
@@ -74,11 +72,12 @@ module.exports.cacheRules = {
         match: url => [
             // "cdn.staticfile.org",
             "cdn.staticfile.net",
-            "cdn.bootcdn.net",
+            // "cdn.bootcdn.net",
             "jsd.cdn.zzko.cn",
-            "jsd.onmicrosoft.cn",
+            // "jsd.onmicrosoft.cn",
             "sdk.51.la",
-            "mirrors.sustech.edu.cn",
+            "www.clarity.ms",
+            // "mirrors.sustech.edu.cn",
             "s4.zstatic.net",
             // "npm.elemecdn.com",
             // "cdn.cbd.int",
