@@ -16,7 +16,6 @@ menu:
   交流||fas fa-list:
     友链: /link/ || fas fa-link
     留言板: /comment/ || fas fa-share-nodes
-    说说: /talk/ || fas fa-comment-dots
   公告栏: /board/ || fas fa-clipboard-list
   关于||fas fa-list:
     关于我: /about/ || fas fa-user
@@ -67,7 +66,7 @@ archive_img: https://s2.hdslb.com/bfs/article/af02e5189cac3c20945b0b55d4a04a10dd
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: https://s2.hdslb.com/bfs/article/1108cdec5c3ccbd7195e1fc4620ec71525e298f4.jpg@1e_1c.webp
+tag_img:
 
 # The banner image of tag page
 # format:
@@ -76,7 +75,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img: https://s2.hdslb.com/bfs/article/836c29154d0f649d3c5c5733f8a26a680e9ef259.jpg@1e_1c.webp
+category_img:
 
 # The banner image of category page
 # format:
@@ -111,9 +110,9 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
-  subtitle: 'Page Not Found'
-  background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
+  enable: true
+  subtitle: '歇会儿吧，看看图'
+  background: https://uapis.cn/api/imgapi/furry/img4k.php
 
 post_meta:
   page: # Home Page
@@ -281,6 +280,7 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
   card_post_series:
     enable: true
+    series_title: false # The title shows the series name
     orderBy: 'date' # Order by title or date
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
@@ -666,12 +666,12 @@ mask:
 rightside_bottom:
 
 # Enter transitions (開啓網頁進入效果)
-enter_transitions: false
+enter_transitions: true
 
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
+  enable: false
   colorful: true # open particle animation (冒光特效)
   shake: false #  open shake (抖動特效)
   mobile: false
@@ -939,7 +939,7 @@ CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # Dev version can only choose. ( dev版的主題只能設置為 local )
-  internal_provider: custom
+  internal_provider: local
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
@@ -950,10 +950,11 @@ CDN:
   version: false
 
   # Custom format
-  # custom_format: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+  # custom_format: https://cdn.staticfile.net/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://cdn.bootcdn.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
-  # custom_format: https://s4.zstatic.net/npm/${name}/@${version}/${file}
+  # custom_format: https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
+  # custom_format: https://s4.zstatic.net/npm/${name}@${version}/${file}
+  custom_format: https://jsd.cdn.zzko.cn/npm/${name}@${version}/${file}
 
   option:
     # main_css:
@@ -973,8 +974,8 @@ CDN:
     # valine:
     # disqusjs:
     # disqusjs_css:
-    twikoo: https://s4.zstatic.net/ajax/libs/twikoo/1.6.32/twikoo.all.min.js
-    waline_js: https://s4.zstatic.net/npm/@waline/client@3.1.3/dist/waline.js
+    # twikoo:
+    # waline_js:
     # waline_css:
     # giscus:
     # sharejs:
