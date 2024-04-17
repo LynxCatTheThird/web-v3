@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@renbaoshuo/markdown-it-katex": "^2.0.2",
-    "hexo": "^7.1.1",
+    "hexo": "^7.2.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-clean-css": "^2.0.0",
     "hexo-deployer-git": "^4.0.0",
