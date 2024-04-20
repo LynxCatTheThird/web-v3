@@ -923,12 +923,18 @@ inject:
   head:
     # - <meta name="referrer" content="no-referrer">
     - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    - <script>LA.init({id:"3FHtwMLrNsmeb3xo",ck:"3FHtwMLrNsmeb3xo",autoTrack:true})</script>
+    - <script>LA.init({id:"3FHtwMLrNsmeb3xo",ck:"3FHtwMLrNsmeb3xo",autoTrack:true,hashMode:true,screenRecord:true})</script>
     - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
-    - <script>new LingQue.Monitor().init({id:"3FIVcC1kwtgWSdW3",sendSuspicious:true});</script>
-    # - <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css" />
+    - <script>new LingQue.Monitor().init({id:"3FIVcC1kwtgWSdW3",sendSuspicious:true,sendSpaPv:true});</script>
+    
     # - <link rel="stylesheet" href="https://s2.hdslb.com/bfs/static/jinkela/long/font/medium.css">
     # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend&display=swap">
+    
+    # - <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/sakana-widget@2.7.0/lib/sakana.min.css" />
+    # - <div id="sakana-widget" style="position:fixed;bottom:30px;left:50px;z-index:999;"></div>
+    # - <script>function initSakanaWidget() {new SakanaWidget().mount('#sakana-widget');}</script>
+    # - <script async onload="initSakanaWidget()" src="https://jsd.cdn.zzko.cn/npm/sakana-widget@2.7.0/lib/sakana.min.js"></script>
+
   bottom:
     # - <script src="https://example.org/main.js"></script>
 
@@ -953,7 +959,6 @@ CDN:
   # custom_format: https://cdn.staticfile.net/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://cdn.bootcdn.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
-  # custom_format: https://s4.zstatic.net/npm/${name}@${version}/${file}
   custom_format: https://jsd.cdn.zzko.cn/npm/${name}@${version}/${file}
 
   option:

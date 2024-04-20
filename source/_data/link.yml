@@ -3,7 +3,7 @@
   link_list:
     - name: Argvchs
       link: https://argvchs.netlify.app/
-      avatar: https://static-argvchs.netlify.app/images/avatar.jpg
+      avatar: https://s2.hdslb.com/bfs/article/11a5b6906d981fbce66a4999a3a13bc61352440272.png@1e_1c.webp
       descr: Here's an argvchs...
     - name: 山岳库博
       link: https://kmar.top/
@@ -11,16 +11,20 @@
       descr: 开发学习启发性二刺螈
     - name: HiPeach
       link: https://opeach.cn/
-      avatar: https://npm.elemecdn.com/opicture@1.0.0/main/avatar.webp
+      avatar: https://s2.hdslb.com/bfs/article/4062e91825fc34613ea080dd22bfe4ae1352440272.png@1e_1c.webp
       descr: 妙不可言
     - name: Shine
       link: https://blog.shineyu.cn/
-      avatar: https://s3.bmp.ovh/imgs/2022/11/23/129c19d56d22c637.png
+      avatar: https://s2.hdslb.com/bfs/article/6d5b03db4f661dd4ec9e25fa2fc33ced1352440272.png@1e_1c.webp
       descr: Let's go! Target, The Vast Stars!
     - name: Marcus
       link: https://blog.marcus233.top/
-      avatar: https://img01.anheyu.com/useruploads/8/2022/12/15/639adf5b8806a.png
+      avatar: https://s2.hdslb.com/bfs/article/06be5fee6863a9bfe97d4fe4cf57de211352440272.png@1e_1c.webp
       descr: 人间值得，未来可期
+    - name: BZDJSM
+      link: https://www.bzdjsm.com/
+      avatar: https://s2.hdslb.com/bfs/article/a10901dd394f9da7b7a77d027c38430a1352440272.jpg@1e_1c.webp
+      descr: Nothing...
     # - name: 蓝幽呀
     #   link: https://lanyou.me/
     #   avatar: https://lanyou.me/image/2.jpg
