@@ -27,12 +27,16 @@ menu:
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: light # darker / pale night / light / ocean / false
+highlight_height_limit: 200 # unit: px
+code_word_wrap: false
+
+# highlight toolbar
+highlight_theme_macStyle: true # use mac style
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 200 # unit: px
-code_word_wrap: false
+highlight_fullpage: true # true: add button to toggle full page
 
 # Social Settings (社交圖標設置)
 # formal:
@@ -63,6 +67,7 @@ default_top_img: https://s2.hdslb.com/bfs/article/44385dbc33d77db6ebf7daee2eb3da
 
 # The banner image of archive page
 archive_img: https://s2.hdslb.com/bfs/article/af02e5189cac3c20945b0b55d4a04a10ddfc4dd9.jpg@1e_1c.webp
+
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
@@ -119,9 +124,10 @@ post_meta:
     date_type: created # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
     date_format: date # date/relative 顯示日期還是相對日期
     categories: true # true or false 主頁是否顯示分類
-    tags: true # true or false 主頁是否顯示標籤
+    tags: false # true or false 主頁是否顯示標籤
     label: true # true or false 顯示描述性文字
   post:
+    position: left # left or center 文章頁標題位置
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
     date_format: date # date/relative 顯示日期還是相對日期
     categories: true # true or false 文章頁是否顯示分類
@@ -134,16 +140,15 @@ post_meta:
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 2
+  method: 3
   length: 500 # if you set method to 2 or 3, the length need to config
 
 # anchor
 anchor:
-  button:
-    enable: true
-    always_show: true
-    icon: # the unicode value of Font Awesome icon, such as '\3423'
-  auto_update: false # when you scroll in post, the URL will update according to header id.
+  # when you scroll, the URL will update according to header id.
+  auto_update: true
+  # Click the headline to scroll and update the anchor
+  click_to_scroll: true
 
 # figcaption (圖片描述文字)
 photofigcaption: true
@@ -178,6 +183,7 @@ post_copyright:
 # Sponsor/reward
 reward:
   enable: false
+  text:
   QR_code:
     # - img: /img/wechat.jpg
     #   link:
@@ -248,7 +254,7 @@ aside:
       link: https://github.com/LynxCatTheThird
   card_announcement:
     enable: true
-    content: 复活吧！我的 Butterfly！
+    content: 五一快乐！
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -469,7 +475,7 @@ valine:
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: https://waline-vercel.lynx3.top/ # Waline server address url
+  serverURL: https://wl.api.lynx3.top/ # Waline server address url
   bg: # waline background
   pageview: false
   option:
@@ -496,7 +502,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://twikoo-vercel.lynx3.top/
+  envId: https://vc.tk.api.lynx3.top/
   region:
   visitor: false
   option:
@@ -561,6 +567,7 @@ crisp:
   enable: false
   website_id:
 
+# messenger
 # https://developers.facebook.com/docs/messenger-platform/discovery/facebook-chat-plugin/
 messenger:
   enable: false
@@ -649,6 +656,9 @@ index_top_img_height:
 category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
+# Stretches the lines so that each line has equal width（文字向兩側對齊，對最後一行無效）
+text_align_justify: false
+
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
@@ -673,7 +683,7 @@ enter_transitions: true
 activate_power_mode:
   enable: false
   colorful: true # open particle animation (冒光特效)
-  shake: false #  open shake (抖動特效)
+  shake: true #  open shake (抖動特效)
   mobile: false
 
 # Background effects (背景特效)
@@ -691,7 +701,7 @@ canvas_ribbon:
 
 # Fluttering Ribbon (動態彩帶)
 canvas_fluttering_ribbon:
-  enable: true
+  enable: false
   mobile: false
 
 # canvas_nest
@@ -716,7 +726,7 @@ click_heart:
   mobile: false
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
-ClickShowText:
+clickShowText:
   enable: false
   text:
     # - I
@@ -771,7 +781,7 @@ subtitle:
   # source: 2  調用一句網（簡體） https://yijuzhan.com/
   # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: 1
+  source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
 
@@ -810,7 +820,7 @@ fancybox: true
 
 # series (系列文章)
 series:
-  enable: false
+  enable: true
   orderBy: 'title' # Order by title or date
   order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
   number: true
@@ -819,13 +829,15 @@ series:
 # See https://github.com/paulrosen/abcjs
 abcjs:
   enable: false
-  per_page: false
+  per_page: true
 
-# mermaid
-# see https://github.com/mermaid-js/mermaid
+# Mermaid
+# See https://github.com/mermaid-js/mermaid
 mermaid:
   enable: true
-  # built-in themes: default/forest/dark/neutral
+  # Write Mermaid diagrams using code blocks （以代碼塊形式書寫 Mermaid）
+  code_write: false 
+  # Built-in themes: default/forest/dark/neutral
   theme:
     light: default
     dark: dark
@@ -859,14 +871,14 @@ pjax:
 # Inject the css and script (aplayer/meting)
 aplayerInject:
   enable: false
-  per_page: false
+  per_page: true
 
 # Snackbar (Toast Notification 彈窗)
 # https://github.com/polonel/SnackBar
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: true
+  enable: false
   position: bottom-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
@@ -962,59 +974,58 @@ CDN:
   custom_format: https://jsd.cdn.zzko.cn/npm/${name}@${version}/${file}
 
   option:
-    # main_css:
-    # main:
-    # utils:
-    # translate:
-    # local_search:
+    # abcjs_basic_js:
+    # activate_power_mode:
     # algolia_js:
     # algolia_search:
-    # instantsearch:
-    # docsearch_js:
-    # docsearch_css:
-    # pjax:
-    # gitalk:
-    # gitalk_css:
-    # blueimp_md5:
-    # valine:
-    # disqusjs:
-    # disqusjs_css:
-    # twikoo:
-    # waline_js:
-    # waline_css:
-    # giscus:
-    # sharejs:
-    # sharejs_css:
-    # mathjax:
-    # katex:
-    # katex_copytex:
-    # mermaid:
-    # canvas_ribbon:
-    # canvas_fluttering_ribbon:
-    # canvas_nest:
-    # lazyload:
-    # instantpage:
-    # typed:
-    # pangu:
-    # fancybox_css:
-    # fancybox:
-    # medium_zoom:
-    # snackbar_css:
-    # snackbar:
-    # activate_power_mode:
-    # fireworks:
-    # click_heart:
-    # ClickShowText:
-    # fontawesome:
-    # flickr_justified_gallery_js:
-    # flickr_justified_gallery_css:
     # aplayer_css:
     # aplayer_js:
+    # artalk_css:
+    # artalk_js:
+    # blueimp_md5:
+    # busuanzi:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    # canvas_ribbon:
+    # click_heart:
+    # clickShowText:
+    # disqusjs:
+    # disqusjs_css:
+    # docsearch_css:
+    # docsearch_js:
+    # egjs_infinitegrid:
+    # fancybox:
+    # fancybox_css:
+    # fireworks:
+    # fontawesome:
+    # gitalk:
+    # gitalk_css:
+    # giscus:
+    # instantpage:
+    # instantsearch:
+    # katex:
+    # katex_copytex:
+    # lazyload:
+    # local_search:
+    # main:
+    # main_css:
+    # mathjax:
+    # medium_zoom:
+    # mermaid:
     # meting_js:
+    # pangu:
+    # prismjs_autoloader:
     # prismjs_js:
     # prismjs_lineNumber_js:
-    # prismjs_autoloader:
-    # artalk_js:
-    # artalk_css:
-    busuanzi: https://cn.vercount.one/js
-    # abcjs_basic_js:
+    # pjax:
+    # sharejs:
+    # sharejs_css:
+    # snackbar:
+    # snackbar_css:
+    # translate:
+    # twikoo:
+    # typed:
+    # utils:
+    # valine:
+    # waline_css:
+    # waline_js:
