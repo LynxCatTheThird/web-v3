@@ -1,5 +1,7 @@
 ---
 title: 在5分钟内让VS Code可以运行代码
+date: 2022-12-07 08:00:29
+updated: 2023-01-03 15:41:15
 categories:
   - 科学与技术
   - 计算机
@@ -7,10 +9,7 @@ categories:
 tags:
   - 编程
   - 工具
-cover: 'https://s2.hdslb.com/bfs/article/20323dcb19fd18b2c5b6f50c534a439d08cd558e.jpg@1e_1c.webp'
-abbrlink: 748f9323
-date: 2022-12-07 08:00:29
-updated: 2023-01-03 15:41:15
+cover: https://s2.hdslb.com/bfs/article/20323dcb19fd18b2c5b6f50c534a439d08cd558e.jpg@1e_1c.webp
 ---
 
 相比于网上的其他教程，我更倾向于使用 [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) 。它易于上手 ~~*（看下面那么水的方法就知道）*~~、通用性强，适合小白使用。
