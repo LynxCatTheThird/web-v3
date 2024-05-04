@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://lynx3.top/
+url: https://www.lynx3.top/
 permalink: article/:abbrlink/
 permalink_defaults:
 pretty_urls:
@@ -46,7 +46,7 @@ future: true
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
@@ -173,6 +173,13 @@ html_minifier:
   removeStyleLinkTypeAttributes: true
   minifyJS: true
   minifyCSS: true
+# Security
+encrypt: # hexo-blog-encrypt
+  abstract: 文章被加密了, 请输入密码查看。
+  message: 您好, 这里需要密码。
+  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试。
+  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容。
+  theme: xray
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

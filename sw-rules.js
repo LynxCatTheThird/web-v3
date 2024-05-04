@@ -26,7 +26,7 @@ module.exports.config = {
             caches.match(location.href).then(res => {
                 if (res)
                     res.json().then(json => {
-                        utils && utils.snackbarShow(`已刷新缓存，更新为${json.global + '.' + json.local}版本最新内容`, false, 2000)
+                        utils && utils.snackbarShow(`已刷新缓存，更新为${json.global + '.' + json.local}版本最新内容`, false, 2000);
                     });
                 else
                     console.info('未找到缓存');
@@ -44,7 +44,7 @@ module.exports.config = {
     },
     external: {
         timeout: 5000,
-        concurrencyLimit: 100,
+        concurrencyLimit: 10,
         js: [],
         stable: [],
         replacer: srcUrl => {
@@ -65,17 +65,18 @@ module.exports.cacheRules = {
     simple: {
         clean: true,
         search: false,
-        match: (url, $eject) => (url.host.includes('lynx') || url.host.includes('lctt')) && url.pathname.match(/(\.(js|css|xml|json)|\/)$/) // 主站缓存
+        match: (url, $eject) => (url.host.includes('lynx') || url.host.includes('lctt')) && url.pathname.match(/(\.(js|css|xml|json)|\/)$/) && !url.host.includes('api') // 主站缓存
     },
     cdn: {
         clean: true,
         match: url => [
+            "cdn.staticfile.org",
             // "cdn.staticfile.net",
             // "cdn.bootcdn.net",
             "jsd.cdn.zzko.cn",
             // "jsd.onmicrosoft.cn",
-            "sdk.51.la",
-            "www.clarity.ms",
+            // "sdk.51.la",
+            // "www.clarity.ms",
             // "s4.zstatic.net",
             "s2.hdslb.com",
             // "fonts.googleapis.com",
