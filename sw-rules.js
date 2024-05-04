@@ -51,7 +51,6 @@ module.exports.config = {
             if (srcUrl.startsWith('https://jsd.cdn.zzko.cn/')) {
                 const pathname = new URL(srcUrl).pathname;
                 return [
-                    srcUrl,
                     `https://cdn.jsdelivr.net/${pathname}`,
                 ];
             } else {
