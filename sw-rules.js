@@ -48,11 +48,11 @@ module.exports.config = {
         js: [],
         stable: [],
         replacer: srcUrl => {
-            if (srcUrl.startsWith('https://cdn.jsdelivr.net/')) {
+            if (srcUrl.startsWith('https://jsd.cdn.zzko.cn/')) {
                 const pathname = new URL(srcUrl).pathname;
                 return [
                     srcUrl,
-                    `https://jsd.cdn.zzko.cn/${pathname}`,
+                    `https://cdn.jsdelivr.net/${pathname}`,
                 ];
             } else {
                 return srcUrl;
