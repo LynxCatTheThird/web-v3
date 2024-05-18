@@ -35,6 +35,6 @@
     "hexo-uglify": "^2.0.0",
     "hexo-wordcount": "^6.0.1",
     "katex": "^0.16.10",
-    "swpp-backends": "^2.3.11"
+    "swpp-backends": "^2.3.12"
   }
 }
