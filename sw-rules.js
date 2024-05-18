@@ -47,16 +47,7 @@ module.exports.config = {
         concurrencyLimit: 10,
         js: [],
         stable: [],
-        replacer: srcUrl => {
-            if (srcUrl.startsWith('https://jsd.cdn.zzko.cn/')) {
-                const pathname = new URL(srcUrl).pathname;
-                return [
-                    `https://cdn.jsdelivr.net/${pathname}`,
-                ];
-            } else {
-                return srcUrl;
-            }
-        }
+        replacer: srcUrl => srcUrl,
     }
 };
 
