@@ -61,7 +61,7 @@ module.exports.cacheRules = {
         clean: true,
         match: url => [
             "cdn.staticfile.org",
-            // "cdn.staticfile.net",
+            "cdn.staticfile.net",
             // "cdn.bootcdn.net",
             "jsd.cdn.zzko.cn",
             // "jsd.onmicrosoft.cn",
@@ -69,7 +69,7 @@ module.exports.cacheRules = {
             // "www.clarity.ms",
             // "s4.zstatic.net",
             "s2.hdslb.com",
-            // "fonts.googleapis.com",
+            "fonts.googleapis.com",
         ].includes(url.host) && url.pathname.match(/\.(js|css|woff2|woff|ttf|json|png|jpg|webp)$/) // CDN 缓存
     }
 };
