@@ -750,10 +750,10 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size: 15px
+  global-font-size: 16px
   code-font-size:
-  font-family: HarmonyOS_Regular, Noto Sans SC, "Microsoft YaHei", sans-serif
-  code-font-family: JetBrains Mono, monospace, HarmonyOS_Regular, "Noto Sans SC", "Microsoft YaHei", sans-serif
+  font-family: "'Noto Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Color Emoji', 'Microsoft YaHei', sans-serif"
+  code-font-family: "'JetBrains Mono', monospace, 'Noto Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Color Emoji', 'Microsoft YaHei', sans-serif"
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
@@ -940,9 +940,10 @@ inject:
     - <script>new LingQue.Monitor().init({id:"3FIVcC1kwtgWSdW3",sendSuspicious:true,sendSpaPv:true});</script>
 
     - <link rel="stylesheet" href="/css/custom.css">
-    
-    - <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap" rel="stylesheet">
-    - <link rel="stylesheet" href="https://s2.hdslb.com/bfs/static/jinkela/long/font/regular.css">
+    - <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Color+Emoji&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap">
+    # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap">
+    # - <link rel="stylesheet" href="https://s2.hdslb.com/bfs/static/jinkela/long/font/regular.css">
     # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend&display=swap">
     
     # - <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/sakana-widget@2.7.0/lib/sakana.min.css" />
@@ -974,7 +975,7 @@ CDN:
   # custom_format: https://cdn.staticfile.net/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://cdn.bootcdn.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://jsd.cdn.zzko.cn/npm/${name}@${version}/${file}
+  custom_format: https://cdn.jsdmirror.com/npm/${name}@${version}/${file}
 
   option:
     # abcjs_basic_js:

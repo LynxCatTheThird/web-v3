@@ -63,13 +63,14 @@ module.exports.cacheRules = {
             "cdn.staticfile.org",
             "cdn.staticfile.net",
             // "cdn.bootcdn.net",
-            "jsd.cdn.zzko.cn",
+            "cdn.jsdmirror.com",
             // "jsd.onmicrosoft.cn",
             // "sdk.51.la",
             // "www.clarity.ms",
             // "s4.zstatic.net",
             "s2.hdslb.com",
             "fonts.googleapis.com",
+            "fonts.gstatic.com",
         ].includes(url.host) && url.pathname.match(/\.(js|css|woff2|woff|ttf|json|png|jpg|webp)$/) // CDN 缓存
     }
 };
