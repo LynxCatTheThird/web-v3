@@ -95,9 +95,7 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: butterfly
-# Markdown
+### Markdown
 markdown:
   preset: 'default'
   render:
@@ -108,15 +106,22 @@ markdown:
     linkify: true
     typographer: false
   plugins:
-    - markdown-it-abbr
-    - markdown-it-sub
-    - markdown-it-sup
-    - markdown-it-footnote
-    - '@renbaoshuo/markdown-it-katex'
+    - markdown-it-abbr # 注释
+    # - markdown-it-attrs # 附加属性
+    # - markdown-it-cjk-breaks # 抑制东亚字符之间的换行
+    # - markdown-it-container # 自定义块
+    - markdown-it-deflist # 定义列表
+    - markdown-it-emoji # 表情
+    - markdown-it-footnote # 脚注
+    - markdown-it-ins # 插入（下划线）
+    - markdown-it-mark # 标记（高亮）
+    - markdown-it-sup # 上标
+    - markdown-it-sub # 下标
+    - '@renbaoshuo/markdown-it-katex' # 公式
   anchors:
     level: 1
   inline: false  # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
-# Links
+### Links
 abbrlink:
   alg: crc32      #support crc16(default) and crc32
   rep: hex        #support dec(default) and hex
@@ -136,13 +141,13 @@ nofollow:
   exclude:
     - 'exclude1.com'
     - 'exclude2.com'
-# Search
+### Search
 search:
   path: search.xml
   field: post
   content: true
   format: html
-# Sitemap
+### Sitemap
 sitemap:
   path: 
     - sitemap.xml
@@ -150,7 +155,7 @@ sitemap:
   rel: true
   tags: true
   categories: true
-# Swpp
+### Swpp
 swpp:
   # 是否启用插件
   enable: true
@@ -161,7 +166,7 @@ swpp:
   warn_level: 1
   # 检查版本的 URL，不能以 '/' 结尾
   # npm_url: 'https://registry.npmmirror.com'
-# Minify
+### Minify
 uglify:
   mangle: true
   output:
@@ -181,7 +186,7 @@ html_minifier:
   removeStyleLinkTypeAttributes: true
   minifyJS: true
   minifyCSS: true
-# Security
+### Security
 encrypt: # hexo-blog-encrypt
   abstract: 文章被加密了, 请输入密码查看。
   message: 您好, 这里需要密码。
@@ -189,6 +194,8 @@ encrypt: # hexo-blog-encrypt
   wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容。
   theme: xray
   silent: true
+## Themes: https://hexo.io/themes/
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
