@@ -475,7 +475,7 @@ valine:
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: https://wl.api.lynx3.top/ # Waline server address url
+  serverURL: https://vc.wl.api.lynx3.top/ # Waline server address url
   bg: # waline background
   pageview: false
   option:
@@ -752,8 +752,8 @@ beautify:
 font:
   global-font-size: 16px
   code-font-size:
-  font-family: "'Noto Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Color Emoji', 'Microsoft YaHei', sans-serif"
-  code-font-family: "'JetBrains Mono', monospace, 'Noto Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Color Emoji', 'Microsoft YaHei', sans-serif"
+  font-family:
+  code-font-family: "'JetBrains Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif"
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
@@ -940,12 +940,8 @@ inject:
     - <script>new LingQue.Monitor().init({id:"3FIVcC1kwtgWSdW3",sendSuspicious:true,sendSpaPv:true});</script>
 
     - <link rel="stylesheet" href="/css/custom.css">
-    - <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Color+Emoji&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap">
-    # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap">
-    # - <link rel="stylesheet" href="https://s2.hdslb.com/bfs/static/jinkela/long/font/regular.css">
-    # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend&display=swap">
-    
+    - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
+
     # - <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/sakana-widget@2.7.0/lib/sakana.min.css" />
     # - <div id="sakana-widget" style="position:fixed;bottom:30px;left:50px;z-index:999;"></div>
     # - <script>function initSakanaWidget() {new SakanaWidget().mount('#sakana-widget');}</script>
@@ -1027,9 +1023,9 @@ CDN:
     # snackbar:
     # snackbar_css:
     # translate:
-    # twikoo:
+    twikoo: https://cdn.staticfile.net/twikoo/1.6.36/twikoo.all.min.js
     # typed:
     # utils:
     # valine:
-    # waline_css:
-    # waline_js:
+    waline_css: https://cdn.staticfile.net/waline/3.2.1/waline.min.css
+    waline_js: https://cdn.staticfile.net/waline/3.2.1/waline.min.js
