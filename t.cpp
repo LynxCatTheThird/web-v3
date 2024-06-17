@@ -236,9 +236,9 @@ int main(int argc, char* argv[ ]) {
         return 1;
     } else if (isOrder("build", argv[1])) {
         hexoBuild();
-    } else if (isOrder("updatesubmodules", argv[1]) || isOrder("updatetheme", argv[1])) {
+    } else if (isOrder("submodules", argv[1]) || isOrder("theme", argv[1])) {
         std::system("git submodule update --remote --merge");
-    } else if (isOrder("updatepackages", argv[1]) || isOrder("update", argv[1])) {
+    } else if (isOrder("packages", argv[1]) || isOrder("update", argv[1])) {
         std::system("ncu -u && npm install");
     } else if (isOrder("server", argv[1])) {
         hexoServer();
