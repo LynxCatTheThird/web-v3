@@ -254,7 +254,7 @@ aside:
       link: https://github.com/LynxCatTheThird
   card_announcement:
     enable: true
-    content: 五一快乐！
+    content: 暑假快乐！
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -967,11 +967,19 @@ CDN:
   # Add version number to url, true or false
   version: false
 
-  # Custom format
+  # Custom format (测速结果为第二次加载的结果）
+  ## CDNJS
   # custom_format: https://cdn.staticfile.net/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://cdn.bootcdn.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
+  # custom_format: https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
+  # custom_format: https://cdnjs.webstatic.cn/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
+  # custom_format: https://sf.akass.cn/${cdnjs_name}/${version}/${min_cdnjs_file}
+  ## NPM(推荐，CDNJS 并不总是提供最新版本的包)
   custom_format: https://cdn.jsdmirror.com/npm/${name}@${version}/${file}
+  # custom_format: https://npm.webcache.cn/${name}@${version}/${file}
+  # custom_format: https://registry.npmmirror.com/${name}/${version}/files/${file}
+  # custom_format: https://npm.akass.cn/${name}@${version}/${file}
 
   option:
     # abcjs_basic_js:

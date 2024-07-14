@@ -44,7 +44,7 @@ module.exports.config = {
     },
     external: {
         timeout: 5000,
-        concurrencyLimit: 10,
+        concurrencyLimit: 5,
         js: [],
         stable: [],
         replacer: srcUrl => srcUrl,
@@ -85,10 +85,6 @@ module.exports.getSpareUrls = srcUrl => {
             ]
         };
     }
-};
-
-module.exports.isMemoryQueue = request => {
-    // do something...
 };
 
 module.exports.ejectValues = (hexo, rules) => ({
