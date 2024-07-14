@@ -120,7 +120,7 @@ markdown:
     - '@renbaoshuo/markdown-it-katex' # 公式
   anchors:
     level: 1
-  inline: false  # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
+  inline: false # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
 ### Links
 abbrlink:
   alg: crc32      #support crc16(default) and crc32
@@ -166,26 +166,38 @@ swpp:
   warn_level: 1
   # 检查版本的 URL，不能以 '/' 结尾
   # npm_url: 'https://registry.npmmirror.com'
-### Minify
-uglify:
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - "*.min.js"
-clean_css:
-  exclude:
-    - "*.min.css"
-html_minifier:
-  collapseBooleanAttributes: true
-  collapseWhitespace: true
-  ignoreCustomComments: [!!js/regexp /^\s*more/]
-  removeComments: true
-  removeEmptyAttributes: true
-  removeScriptTypeAttributes: true
-  removeStyleLinkTypeAttributes: true
-  minifyJS: true
-  minifyCSS: true
+# Minify
+minify:
+  enable: true
+  previewServer: true
+  html:
+    enable: true
+    exclude:
+  css:
+    enable: true
+    exclude:
+  js:
+    enable: true
+    exclude:
+      - "*.min.js"
+  svg:
+    enable: true
+    include:
+      - "*.svg"
+  gzip:
+    enable: false
+  brotli:
+    enable: false
+  xml:
+    enable: false
+    include:
+      - "*.xml"
+  json:
+    enable: true
+    include:
+      - "*.json"
+  zstd:
+    enable: false
 ### Security
 encrypt: # hexo-blog-encrypt
   abstract: 文章被加密了, 请输入密码查看。
@@ -202,7 +214,4 @@ theme: butterfly
 deploy:
   - type: git
     repository: git@github.com:LynxCatTheThird/lynxcatthethird.github.io.git
-    branch: main
-  - type: git
-    repository: git@github.com:LeptailTheFirst/LeptailTheFirst.github.io.git
     branch: main
