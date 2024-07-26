@@ -591,7 +591,7 @@ cloudflare_analytics:
 
 # Microsoft Clarity
 # https://clarity.microsoft.com/
-microsoft_clarity: hzmgihcgpx
+microsoft_clarity:
 
 # Advertisement
 # --------------------------------------
@@ -934,18 +934,14 @@ css_prefix: false
 inject:
   head:
     # - <meta name="referrer" content="no-referrer">
-    - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    - <script>LA.init({id:"3FHtwMLrNsmeb3xo",ck:"3FHtwMLrNsmeb3xo",autoTrack:true,hashMode:true,screenRecord:true})</script>
-    - <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
-    - <script>new LingQue.Monitor().init({id:"3FIVcC1kwtgWSdW3",sendSuspicious:true,sendSpaPv:true});</script>
 
     - <link rel="stylesheet" href="/css/custom.css">
     - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
 
-    # - <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/sakana-widget@2.7.0/lib/sakana.min.css" />
+    # - <link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/sakana-widget@2.7.0/lib/sakana.min.css" />
     # - <div id="sakana-widget" style="position:fixed;bottom:30px;left:50px;z-index:999;"></div>
     # - <script>function initSakanaWidget() {new SakanaWidget().mount('#sakana-widget');}</script>
-    # - <script async onload="initSakanaWidget()" src="https://jsd.cdn.zzko.cn/npm/sakana-widget@2.7.0/lib/sakana.min.js"></script>
+    # - <script async onload="initSakanaWidget()" src="https://cdn.jsdmirror.com/npm/sakana-widget@2.7.0/lib/sakana.min.js"></script>
 
   bottom:
     # - <script src="https://example.org/main.js"></script>
@@ -976,10 +972,10 @@ CDN:
   # custom_format: https://cdnjs.webstatic.cn/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   # custom_format: https://sf.akass.cn/${cdnjs_name}/${version}/${min_cdnjs_file}
   ## NPM(推荐，CDNJS 并不总是提供最新版本的包)
-  custom_format: https://cdn.jsdmirror.com/npm/${name}@${version}/${file}
+  # custom_format: https://cdn.jsdmirror.com/npm/${name}@${version}/${file}
   # custom_format: https://npm.webcache.cn/${name}@${version}/${file}
   # custom_format: https://registry.npmmirror.com/${name}/${version}/files/${file}
-  # custom_format: https://npm.akass.cn/${name}@${version}/${file}
+  custom_format: https://npm.akass.cn/${name}@${version}/${file}
 
   option:
     # abcjs_basic_js:
@@ -1031,9 +1027,9 @@ CDN:
     # snackbar:
     # snackbar_css:
     # translate:
-    twikoo: https://cdn.staticfile.net/twikoo/1.6.36/twikoo.all.min.js
+    # twikoo: https://cdn.staticfile.net/twikoo@1.6.36/twikoo.all.min.js
     # typed:
     # utils:
     # valine:
-    waline_css: https://cdn.staticfile.net/waline/3.2.1/waline.min.css
-    waline_js: https://cdn.staticfile.net/waline/3.2.1/waline.min.js
+    # waline_css: https://cdn.staticfile.net/waline/3.2.1/waline.min.css
+    # waline_js: https://cdn.staticfile.net/waline/3.2.1/waline.min.js
