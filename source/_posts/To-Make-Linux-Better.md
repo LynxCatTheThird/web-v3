@@ -9,7 +9,7 @@ categories:
 tags:
   - Linux
   - Bug
-cover: https://s2.hdslb.com/bfs/article/60bd9ceb33e924c1ac72dd757c2fb8201352440272.png
+cover: https://s2.hdslb.com/bfs/article/60bd9ceb33e924c1ac72dd757c2fb8201352440272.png@1e_1c.webp
 description: Linux 的备忘录，记录 Linux 相关的一些问题和解决方案。
 abbrlink: b5186965
 ---
