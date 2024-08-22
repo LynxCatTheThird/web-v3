@@ -9,8 +9,7 @@ categories:
 tags:
   - AI
   - 社会
-cover: >-
-  https://s2.hdslb.com/bfs/article/6e82b33c9eeddcb17103790d181dee1fdcec825c.jpg@1e_1c.webp
+cover: https://s2.hdslb.com/bfs/article/6e82b33c9eeddcb17103790d181dee1fdcec825c.jpg@1e_1c.webp
 description: AI：你这想法挺危险啊，我都不敢这么想……
 abbrlink: 5e83efa
 ---

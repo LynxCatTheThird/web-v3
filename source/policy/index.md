@@ -33,10 +33,6 @@ date: 2023-06-02 17:33:20
 
 ### 获取与使用方式
 
-- 灵雀应用监控平台会收集您的访问信息与访问过程
-
-- 51la 统计工具会收集您的访问信息、访问来源与访问过程
-
 - 一言、不蒜子、Github API 等 API 以及 Github Pages、Vercel、Netlify、Cloudflare、MongoDB 等服务提供商可能会收集或/并记录您的访问信息
 
 **不能确定一言、不蒜子、Github API 等 API 以及 Github Pages、Vercel、Netlify、Cloudflare 等服务提供商将您的信息用于何处，详情请访问第三方提供的隐私协议！**
