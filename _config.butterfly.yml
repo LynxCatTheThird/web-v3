@@ -62,7 +62,7 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: https://s2.hdslb.com/bfs/article/621ceaa1fcd3b63bfb3d7d3948bd93647ac50b72.png@1e_1c.webp
+favicon: /favicon.ico
 
 avatar:
   img: https://s2.hdslb.com/bfs/article/621ceaa1fcd3b63bfb3d7d3948bd93647ac50b72.png@1e_1c.webp
@@ -534,7 +534,7 @@ comments:
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: true
+  lazyload: false
   # Display comment count in post's top_img
   count: false
   # Display comment count in Home Page
@@ -655,7 +655,7 @@ artalk:
 # --------------------------------------
 
 chat:
-  # Choose: chatra/tidio/daovoice/crisp/messenger
+  # Choose: chatra/tidio/daovoice/crisp
   # Leave it empty if you don't need chat
   use:
   # Chat Button [recommend]
@@ -680,11 +680,6 @@ daovoice:
 crisp:
   website_id:
 
-# https://developers.facebook.com/docs/messenger-platform/discovery/facebook-chat-plugin/
-messenger:
-  pageID:
-  lang: zh_TW
-
 # --------------------------------------
 # Analysis
 # --------------------------------------
@@ -700,6 +695,20 @@ cloudflare_analytics:
 
 # https://clarity.microsoft.com/
 microsoft_clarity:
+
+# https://umami.is/
+umami_analytics:
+  enable: false
+  # For self-hosted setups, configure the hostname of the Umami instance
+  serverURL:
+  website_id:
+  option:
+  UV_PV:
+    site_uv: false
+    site_pv: false
+    page_pv: false
+    # Umami Cloud (API key) / self-hosted Umami (token)
+    token:
 
 # --------------------------------------
 # Advertisement
@@ -797,29 +806,29 @@ beautify:
   # Specify the field to beautify (site or post)
   field: site
   # Specify the icon to be used as a prefix for the title, such as '\f0c1'
-  title-prefix-icon: '\f101'
+  title_prefix_icon: '\f101'
   # Specify the color of the title prefix icon, such as '#F47466'
-  title-prefix-icon-color:
+  title_prefix_icon_color:
 
 # Global font settings
 # Don't modify the following settings unless you know how they work
 font:
-  global-font-size: 16px
-  code-font-size:
-  font-family:
-  code-font-family: "'JetBrains Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif"
+  global_font_size: 16px
+  code_font_size:
+  font_family:
+  code_font_family: "'JetBrains Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Lato, Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif"
 
 # Font settings for the site title and site subtitle
 blog_title_font:
   font_link:
-  font-family:
+  font_family:
 
 # The setting of divider icon
 hr_icon:
   enable: true
   # The unicode value of Font Awesome icon, such as '\3423'
   icon:
-  icon-top:
+  icon_top:
 
 # Typewriter Effect
 # https://github.com/disjukr/activate-power-mode
@@ -937,7 +946,7 @@ note:
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
-  light_bg_offset: -6
+  light_bg_offset: 0
 
 # --------------------------------------
 # Other Settings
