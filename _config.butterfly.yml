@@ -811,8 +811,8 @@ beautify:
 font:
   global_font_size: 16px
   code_font_size:
-  font_family: "'LXGW 975 Gothic SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif"
-  code_font_family: "'JetBrains Mono', 'LXGW 975 Gothic SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif"
+  font_family: "'Noto Sans SC', 'Microsoft YaHei', sans-serif"
+  code_font_family: "'JetBrains Mono', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
 
 # Font settings for the site title and site subtitle
 blog_title_font:
@@ -1038,8 +1038,8 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css">
-    - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
-    - <link rel="stylesheet" href="https://static.zeoseven.com/zsft/185/main/result.css">
+    - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&display=swap">
+    # - <link rel="stylesheet" href="https://static.zeoseven.com/zsft/185/main/result.css">
   bottom:
     # - <script src="https://example.org/main.js"></script>
 
