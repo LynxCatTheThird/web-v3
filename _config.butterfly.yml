@@ -29,7 +29,6 @@ menu:
     关于我: /about/ || fas fa-user
     有问必答: /faq/ || fas fa-file-circle-question
     问题自查: /help/ || fas fa-person-circle-question
-    鸣谢: /thanks/ || fas fa-heart
     条款与政策: /policy/ || fas fa-envelope-open-text
 
 # --------------------------------------
