@@ -11,7 +11,7 @@ a {
 }
 
 /* 对于所有在 #article-container 和 .post-copyright 内的 a 标签，排除含有图片或具有 .headerlink 类的链接，在其前面加上一个图标 */
-#article-container a:not(:has(img)):not(.headerlink)::before,
+#article-container a:not(:has(img)):not(.headerlink):not([class^="btn-"])::before,
 .post-copyright a::before {
     font-family: FontAwesome;
     /* 指定使用的字体系列 */
@@ -24,7 +24,7 @@ a {
 }
 
 /* 对于没有包含图片且非 .headerlink 类型、.post-copyright、.footnote-backref 下的 a 标签设置样式 */
-#article-container a:not(:has(img)):not(.headerlink):not(.footnote-backref):not(s > a),
+#article-container a:not(:has(img)):not(.headerlink):not(.footnote-backref):not([class^="btn-"]):not(s > a),
 .post-copyright a {
     border-bottom: 2px solid;
     /* 给链接下方加粗线 */
@@ -33,7 +33,7 @@ a {
 }
 
 /* 当鼠标悬停在这些链接上时改变样式 */
-#article-container a:not(:has(img)):not(.headerlink):hover,
+#article-container a:not(:has(img)):not(.headerlink):not([class^="btn-"]):hover,
 .post-copyright a:hover {
     border-bottom-color: transparent;
     /* 悬停时移除底部边界线颜色 */
@@ -49,7 +49,6 @@ a {
     /* 平滑过渡效果 */
 }
 
-
 /* 鼠标悬浮在各级标题上时的效果 */
 h1:hover,
 h2:hover,
@@ -63,13 +62,12 @@ h6:hover {
     /* 改变文本颜色 */
 }
 
-/* 对<s>元素及其内部链接的基本样式设定 */
-s,
-s a {
-    background-color: #252525;
+/* 对 <s> 元素及其内部链接的基本样式设定 */
+s {
+    background-color: rgba(27,31,35,0.05) !important;
     /* 背景设为深灰色 */
-    color: #252525 !important;
-    /* 文字颜色也设为深灰色（产生覆盖效果） */
+    color: rgba(255,255,255,0) !important;
+    /* 文字颜色也设为透明防止叠加 */
     text-shadow: none;
     /* 移除文字阴影 */
     padding: 3px 3px;
@@ -82,14 +80,49 @@ s a {
     /* 过渡效果 */
 }
 
-/* 当用户将鼠标移到<s>元素上时改变颜色 */
+s a,
+s code{
+    background-color: rgba(255,255,255,0) !important;
+    /* 背景设为透明防止叠加 */
+    color: rgba(255,255,255,0) !important;
+    /* 文字颜色也设为透明防止叠加 */
+    transition: all 0.2s ease;
+    /* 过渡效果 */
+}
+
+[data-theme='dark'] s,
+[data-theme='dark'] s a,
+[data-theme='dark'] s code {
+    background-color: #252525 !important;
+    /* 背景设为深灰色 */
+    color: #252525 !important;
+    /* 文字颜色也设为深灰色（产生覆盖效果） */
+    transition: all 0.2s ease;
+    /* 过渡效果 */
+}
+
+/* 当用户将鼠标移到 <s> 元素上时改变颜色 */
 s:hover,
 s:active {
     color: var(--font-color) !important;
     /* 使用变量定义的颜色值 */
 }
 
-/* 如果<s>中包含链接，那么当<s>或其中的链接被悬停时更改颜色 */
+/* 当用户将鼠标移到 <s>/<code>元素上时改变颜色 */
+s code:hover {
+    background: rgba(27, 31, 35, 0.05) !important;
+    color: #f47466 !important;
+    transition: all 0.2s ease;
+    /* 过渡效果 */
+}
+
+[data-theme='dark'] s code:hover {
+    background: #2c2c2c !important;
+    transition: all 0.2s ease;
+    /* 过渡效果 */
+}
+
+/* 如果 <s> 中包含链接，那么当 <s> 或其中的链接被悬停时更改颜色 */
 s:hover a,
 a:hover s {
     color: #49b1f5 !important;
