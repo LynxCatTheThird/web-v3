@@ -64,20 +64,20 @@ social:
 favicon: /favicon.ico
 
 avatar:
-  img: https://s2.hdslb.com/bfs/article/621ceaa1fcd3b63bfb3d7d3948bd93647ac50b72.png@1e_1c.webp
+  img: https://s2.hdslb.com/bfs/article/621ceaa1fcd3b63bfb3d7d3948bd93647ac50b72.png@1e_0c.webp
   effect: false
 
 # Disable all banner images
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img: https://s2.hdslb.com/bfs/article/44385dbc33d77db6ebf7daee2eb3da2e34415618.jpg@1e_1c.webp
+default_top_img: https://s2.hdslb.com/bfs/article/44385dbc33d77db6ebf7daee2eb3da2e34415618.jpg@1e_0c.webp
 
 # The banner image of index page
-index_img: https://s2.hdslb.com/bfs/article/03f617329abf8a76f02a7a95db24a0eff8e0c6e2.jpg@1e_1c.webp
+index_img: https://s2.hdslb.com/bfs/article/03f617329abf8a76f02a7a95db24a0eff8e0c6e2.jpg@1e_0c.webp
 
 # The banner image of archive page
-archive_img: https://s2.hdslb.com/bfs/article/af02e5189cac3c20945b0b55d4a04a10ddfc4dd9.jpg@1e_1c.webp
+archive_img: https://s2.hdslb.com/bfs/article/af02e5189cac3c20945b0b55d4a04a10ddfc4dd9.jpg@1e_0c.webp
 
 # Note: tag page, not tags page
 tag_img:
@@ -120,7 +120,7 @@ error_img:
 error_404:
   enable: true
   subtitle: 'Page Not Found'
-  background: https://s2.hdslb.com/bfs/article/a59ff0700a2c75cbec29af244d3068f91352440272.png@1e_1c.webp
+  background: https://s2.hdslb.com/bfs/article/a59ff0700a2c75cbec29af244d3068f91352440272.png@1e_0c.webp
 
 post_meta:
   # Home Page
@@ -710,6 +710,12 @@ umami_analytics:
     page_pv: false
     # Umami Cloud (API key) / self-hosted Umami (token)
     token:
+
+# https://www.googletagmanager.com/
+google_tag_manager:
+  tag_id: 
+  # optional
+  domain: 
 
 # --------------------------------------
 # Advertisement
