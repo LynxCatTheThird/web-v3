@@ -1,6 +1,7 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "web-v3",
+  "version": "1.0.0",
+  "license": "PolyForm Noncommercial License",
   "private": true,
   "scripts": {
     "build": "hexo generate",
@@ -30,8 +31,8 @@
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-wordcount": "^6.0.1",
+    "hexo-word-counter": "^0.2.2",
     "hexo-yam": "^9.0.0",
-    "katex": "^0.16.27"
+    "katex": "^0.16.32"
   }
 }
