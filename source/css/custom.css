@@ -1,52 +1,57 @@
 /* 设置布局的最大宽度 */
 .layout {
-    max-width: 1400px;
-    /* 定义文章容器的最大宽度 */
+  max-width: 1400px;
+  /* 定义文章容器的最大宽度 */
 }
 
 /* 所有 a 标签 */
 a {
-    text-decoration: none !important;
-    /* 移除默认下划线 */
+  text-decoration: none !important;
+  /* 移除默认下划线 */
 }
 
 /* 对于所有在 #article-container 和 .post-copyright 内的 a 标签，排除含有图片或具有 .headerlink 类的链接，在其前面加上一个图标 */
-#article-container a:not(:has(img)):not(.headerlink):not([class^="btn-"])::before,
+#article-container
+  a:not(:has(img)):not(.headerlink):not([class^="btn-"])::before,
 .post-copyright a::before {
-    font-family: FontAwesome;
-    /* 指定使用的字体系列 */
-    content: "\f35d";
-    /* 字符内容, 这里是 FontAwesome 中的一个图标编码 */
-    margin-right: 3px;
-    /* 右边距 */
-    font-size: calc(1em * 0.85);
-    /* 字体大小基于父元素字体大小进行调整 */
+  font-family: FontAwesome;
+  /* 指定使用的字体系列 */
+  content: "\f35d";
+  /* 字符内容, 这里是 FontAwesome 中的一个图标编码 */
+  margin-right: 3px;
+  /* 右边距 */
+  font-size: calc(1em * 0.85);
+  /* 字体大小基于父元素字体大小进行调整 */
 }
 
 /* 对于没有包含图片且非 .headerlink 类型、.post-copyright、.footnote-backref 下的 a 标签设置样式 */
-#article-container a:not(:has(img)):not(.headerlink):not(.footnote-backref):not([class^="btn-"]):not(s > a),
+/* 注意：这里排除了黑幕(span.spoiler)下的 a 标签，防止下划线穿透黑幕 */
+#article-container
+  a:not(:has(img)):not(.headerlink):not(.footnote-backref):not(
+    [class^="btn-"]
+  ):not(span.spoiler a),
 .post-copyright a {
-    border-bottom: 2px solid;
-    /* 给链接下方加粗线 */
-    padding-bottom: 2px;
-    /* 底部内填充 */
+  border-bottom: 2px solid;
+  /* 给链接下方加粗线 */
+  padding-bottom: 2px;
+  /* 底部内填充 */
 }
 
 /* 当鼠标悬停在这些链接上时改变样式 */
 #article-container a:not(:has(img)):not(.headerlink):not([class^="btn-"]):hover,
 .post-copyright a:hover {
-    border-bottom-color: transparent;
-    /* 悬停时移除底部边界线颜色 */
-    padding: 2px 4px;
-    /* 增加周围空间 */
-    color: white !important;
-    /* 文字变为白色 */
-    background-color: #0084ff;
-    /* 背景色变为蓝色 */
-    border-radius: 3px;
-    /* 圆角效果 */
-    transition: all 0.2s ease-out;
-    /* 平滑过渡效果 */
+  border-bottom-color: transparent;
+  /* 悬停时移除底部边界线颜色 */
+  padding: 2px 4px;
+  /* 增加周围空间 */
+  color: white !important;
+  /* 文字变为白色 */
+  background-color: #0084ff;
+  /* 背景色变为蓝色 */
+  border-radius: 3px;
+  /* 圆角效果 */
+  transition: all 0.2s ease-out;
+  /* 平滑过渡效果 */
 }
 
 /* 鼠标悬浮在各级标题上时的效果 */
@@ -56,75 +61,79 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover {
-    transition: all 0.2s ease-out;
-    /* 平滑过渡 */
-    color: #49b1f5;
-    /* 改变文本颜色 */
+  transition: all 0.2s ease-out;
+  /* 平滑过渡 */
+  color: #49b1f5;
+  /* 改变文本颜色 */
 }
 
-/* 对 <s> 元素及其内部链接的基本样式设定 */
-s {
-    background-color: rgba(27,31,35,0.05) !important;
-    /* 背景设为深灰色 */
-    color: rgba(255,255,255,0) !important;
-    /* 文字颜色也设为透明防止叠加 */
-    text-shadow: none;
-    /* 移除文字阴影 */
-    padding: 3px 3px;
-    /* 内边距 */
-    margin: 0 2px 0 2px;
-    /* 外边距 */
-    border-radius: 4px;
-    /* 边框圆角 */
-    transition: all 0.2s ease;
-    /* 过渡效果 */
+/* 对黑幕元素及其内部链接的基本样式设定 */
+span.spoiler {
+  background-color: #1e1e1e !important;
+  /* 背景设为深灰色（Discord风格暗底） */
+  color: transparent !important;
+  /* 文字颜色也设为透明防止叠加 */
+  text-shadow: none;
+  /* 移除文字阴影 */
+  padding: 3px 3px;
+  /* 内边距 */
+  margin: 0 2px 0 2px;
+  /* 外边距 */
+  border-radius: 4px;
+  /* 边框圆角 */
+  transition: all 0.2s ease;
+  /* 过渡效果 */
+  cursor: pointer;
+  /* 增加一个鼠标指针，暗示可以点击/悬停 */
 }
 
-s a,
-s code{
-    background-color: rgba(255,255,255,0) !important;
-    /* 背景设为透明防止叠加 */
-    color: rgba(255,255,255,0) !important;
-    /* 文字颜色也设为透明防止叠加 */
-    transition: all 0.2s ease;
-    /* 过渡效果 */
+span.spoiler a,
+span.spoiler code {
+  background-color: transparent !important;
+  /* 背景设为透明防止叠加 */
+  color: transparent !important;
+  /* 文字颜色也设为透明防止叠加 */
+  transition: all 0.2s ease;
+  /* 过渡效果 */
 }
 
-[data-theme='dark'] s,
-[data-theme='dark'] s a,
-[data-theme='dark'] s code {
-    background-color: #252525 !important;
-    /* 背景设为深灰色 */
-    color: #252525 !important;
-    /* 文字颜色也设为深灰色（产生覆盖效果） */
-    transition: all 0.2s ease;
-    /* 过渡效果 */
+[data-theme="dark"] span.spoiler,
+[data-theme="dark"] span.spoiler a,
+[data-theme="dark"] span.spoiler code {
+  background-color: #252525 !important;
+  /* 深灰色在暗色模式下过渡更自然 */
+  color: transparent !important;
+  /* 文字颜色设为透明（产生覆盖效果） */
+  transition: all 0.2s ease;
+  /* 过渡效果 */
 }
 
-/* 当用户将鼠标移到 <s> 元素上时改变颜色 */
-s:hover,
-s:active {
-    color: var(--font-color) !important;
-    /* 使用变量定义的颜色值 */
+/* 当用户将鼠标移到黑幕 元素上时改变颜色 */
+span.spoiler:hover,
+span.spoiler:active {
+  background-color: rgba(128, 128, 128, 0.2) !important;
+  /* 背景变为半透明高亮 */
+  color: var(--font-color) !important;
+  /* 使用变量定义的颜色值，让文字显现出来 */
 }
 
-/* 当用户将鼠标移到 <s>/<code>元素上时改变颜色 */
-s code:hover {
-    background: rgba(27, 31, 35, 0.05) !important;
-    color: #f47466 !important;
-    transition: all 0.2s ease;
-    /* 过渡效果 */
+/* 当用户将鼠标移到黑幕内部的 <code> 元素上时改变颜色 */
+span.spoiler code:hover {
+  background: rgba(27, 31, 35, 0.05) !important;
+  color: #f47466 !important;
+  transition: all 0.2s ease;
+  /* 过渡效果 */
 }
 
-[data-theme='dark'] s code:hover {
-    background: #2c2c2c !important;
-    transition: all 0.2s ease;
-    /* 过渡效果 */
+[data-theme="dark"] span.spoiler code:hover {
+  background: #2c2c2c !important;
+  transition: all 0.2s ease;
+  /* 过渡效果 */
 }
 
-/* 如果 <s> 中包含链接，那么当 <s> 或其中的链接被悬停时更改颜色 */
-s:hover a,
-a:hover s {
-    color: #49b1f5 !important;
-    /* 更改为特定的蓝色 */
+/* 如果黑幕中包含链接，那么当其或其中的链接被悬停时更改颜色 */
+span.spoiler:hover a,
+span.spoiler a:hover {
+  color: #49b1f5 !important;
+  /* 更改为特定的蓝色 */
 }

@@ -19,6 +19,7 @@ t.exe
 # Debug & Develop
 themes/butterfly_dev/
 .vscode/
+pnpm-workspace.yaml
 
 # Packages
 package-lock.json

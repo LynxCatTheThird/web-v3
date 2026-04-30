@@ -55,8 +55,10 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://github.com/LynxCatTheThird/ || Github || '#24292e'
-  fab fa-twitter: https://twitter.com/LynxCatTheThird/ || Twitter || '#4a7dbe'
+  fab fa-github: https://github.com/LynxCatTheThird/ || GitHub || '#24292e'
+  fab fa-twitter: https://twitter.com/LynxCatTheThird/ || Twitter || '#1da1f2'
+  fab fa-telegram: https://t.me/LynxCatTheThird/ || Telegram || '#2ca5e0'
+  fas fa-rss: /rss2.xml || RSS || '#f26522'
 
 # --------------------------------------
 # Image Settings
@@ -121,7 +123,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: 'Page Not Found'
+  subtitle: "Page Not Found"
   background: https://s2.hdslb.com/bfs/article/a59ff0700a2c75cbec29af244d3068f91352440272.png@1e_0c.webp
 
 post_meta:
@@ -350,7 +352,7 @@ aside:
     # The title shows the series name
     series_title: false
     # Order by title or date
-    orderBy: 'date'
+    orderBy: "date"
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
   card_webinfo:
@@ -380,9 +382,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: "簡"
 
 # Read Mode
 readmode: true
@@ -630,7 +632,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://vc.tk.api.lynx3.me/
+  envId: https://twikoo.lynx3.me/
   region:
   # Use Twikoo visitor count as the page view count
   visitor: false
@@ -658,7 +660,7 @@ remark42:
 # https://artalk.js.org/guide/frontend/config.html
 artalk:
   server: https://artalk.lynx3.me/
-  site: '猫说 Meow'
+  site: "猫说 Meow"
   # Use Artalk visitor count as the page view count
   visitor: false
   option:
@@ -879,7 +881,7 @@ canvas_fluttering_ribbon:
 canvas_nest:
   enable: false
   # Color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  color: '0,0,255'
+  color: "0,0,255"
   # The opacity of line (0~1)
   opacity: 0.7
   # The z-index property of the background
@@ -928,7 +930,7 @@ lightbox: fancybox
 series:
   enable: false
   # Order by title or date
-  orderBy: 'title'
+  orderBy: "title"
   # Sort of order. 1, asc for ascending; -1, desc for descending
   order: 1
   number: true
@@ -962,16 +964,16 @@ chartjs:
   # The default settings are only used when the MD syntax is not specified.
   # General font color for the chart
   fontColor:
-    light: 'rgba(0, 0, 0, 0.8)'
-    dark: 'rgba(255, 255, 255, 0.8)'
+    light: "rgba(0, 0, 0, 0.8)"
+    dark: "rgba(255, 255, 255, 0.8)"
   # General border color for the chart
   borderColor:
-    light: 'rgba(0, 0, 0, 0.1)'
-    dark: 'rgba(255, 255, 255, 0.2)'
+    light: "rgba(0, 0, 0, 0.1)"
+    dark: "rgba(255, 255, 255, 0.2)"
   # Background color for scale labels on radar and polar area charts
   scale_ticks_backdropColor:
-    light: 'transparent'
-    dark: 'transparent'
+    light: "transparent"
+    dark: "transparent"
 
 # Note - Bootstrap Callout
 note:
@@ -1010,8 +1012,8 @@ snackbar:
   enable: false
   position: bottom-left
   # The background color of Toast Notification in light mode and dark mode
-  bg_light: '#49b1f5'
-  bg_dark: '#1f1f1f'
+  bg_light: "#49b1f5"
+  bg_dark: "#1f1f1f"
 
 # Instant.page
 # https://instant.page/

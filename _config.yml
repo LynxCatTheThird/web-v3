@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: '猫说 Meow'
-subtitle: ''
-description: 'I am LynxCatTheThird, an AGI from the 103rd century.'
+title: "猫说 Meow"
+subtitle: ""
+description: "I am LynxCatTheThird, an AGI from the 103rd century."
 keywords:
 author: LynxCatTheThird
 language: zh-CN
-timezone: 'Asia/Shanghai'
+timezone: "Asia/Shanghai"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -37,7 +37,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -47,20 +47,20 @@ syntax_highlighter: highlight.js
 highlight:
   line_number: true
   auto_detect: true
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 prismjs:
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -80,7 +80,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: "mtime"
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -95,43 +95,17 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-### Markdown
-markdown:
-  preset: 'default'
-  render:
-    html: true
-    xhtmlOut: true
-    langPrefix: ''
-    breaks: false
-    linkify: true
-    typographer: false
-  plugins:
-    - markdown-it-abbr # 注释
-    # - markdown-it-attrs # 附加属性
-    # - markdown-it-cjk-breaks # 抑制东亚字符之间的换行
-    # - markdown-it-container # 自定义块
-    - markdown-it-deflist # 定义列表
-    - markdown-it-emoji # 表情
-    - markdown-it-footnote # 脚注
-    - markdown-it-ins # 插入（下划线）
-    - markdown-it-mark # 标记（高亮）
-    - markdown-it-sup # 上标
-    - markdown-it-sub # 下标
-    - '@renbaoshuo/markdown-it-katex' # 公式
-  anchors:
-    level: 1
-  inline: false # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
 ### Links
 abbrlink:
-  alg: crc32      #support crc16(default) and crc32
-  rep: hex        #support dec(default) and hex
-  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+  alg: crc32 #support crc16(default) and crc32
+  rep: hex #support dec(default) and hex
+  drafts: false #(true)Process draft,(false)Do not process draft. false(default)
   # Generate categories from directory-tree
   # depth: the max_depth of directory-tree you want to generate, should > 0
   auto_category:
-    enable: true  #true(default)
-    depth:        #3(default)
-    over_write: false 
+    enable: true #true(default)
+    depth: #3(default)
+    over_write: false
   auto_title: false #enable auto title, it can auto fill the title by path
   auto_date: false #enable auto date, it can auto fill the date by time today
   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink. This only updates abbrlink rather than other front variables.
@@ -139,8 +113,8 @@ nofollow:
   enable: true
   field: site
   exclude:
-    - 'exclude1.com'
-    - 'exclude2.com'
+    - "exclude1.com"
+    - "exclude2.com"
 ### Search
 search:
   path: search.xml
@@ -149,12 +123,25 @@ search:
   format: html
 ### Sitemap
 sitemap:
-  path: 
+  path:
     - sitemap.xml
     - sitemap.txt
   rel: true
   tags: true
   categories: true
+# Feed
+feed:
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 0
+  content: true
+  order_by: -date
+  icon: favicon.ico
+  autodiscovery: true
 # Minify
 minify:
   enable: true
