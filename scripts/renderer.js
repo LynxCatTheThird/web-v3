@@ -10,6 +10,7 @@ const { sup } = require("@mdit/plugin-sup");
 const { tasklist } = require("@mdit/plugin-tasklist");
 const { katex } = require("@mdit/plugin-katex");
 const { spoiler } = require("@mdit/plugin-spoiler");
+const markdownItAnchor = require("markdown-it-anchor");
 
 // 注入化学宏包
 require("@mdit/plugin-katex/mhchem");
@@ -19,7 +20,7 @@ const md = new MarkdownIt({
   xhtmlOut: true,
   breaks: false,
   linkify: true,
-  typographer: false,
+  typographer: true,
 });
 
 md.use(abbr)
@@ -31,7 +32,11 @@ md.use(abbr)
   .use(sup)
   .use(tasklist)
   .use(spoiler)
-  .use(katex);
+  .use(katex)
+  .use(markdownItAnchor, {
+    level: 1,
+    permalink: false,
+  });
 
 // 注册为 Hexo 渲染引擎
 hexo.extend.renderer.register(
