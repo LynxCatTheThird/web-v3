@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@mdit/plugin-abbr": "^0.23.2",
-    "@mdit/plugin-dl": "^0.23.2",
+    "@mdit/plugin-dl": "^1.0.0",
     "@mdit/plugin-footnote": "^0.23.2",
     "@mdit/plugin-ins": "^0.23.2",
     "@mdit/plugin-katex": "^0.25.2",
