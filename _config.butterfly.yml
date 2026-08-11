@@ -31,6 +31,7 @@ menu:
     # 有问必答: /faq/ || fas fa-file-circle-question
     # 问题自查: /help/ || fas fa-person-circle-question
     条款与政策: /policy/ || fas fa-envelope-open-text
+    AI 标识说明: /policy/ai/ || fas fa-carrot
 
 # --------------------------------------
 # Code Blocks Settings
@@ -134,7 +135,7 @@ post_meta:
     # Choose: date / relative
     date_format: date
     categories: true
-    tags: false
+    tags: true
     label: true
   post:
     # Choose: left / center
@@ -450,9 +451,9 @@ wordcount:
 
 # Busuanzi count for PV / UV in site
 busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+  site_uv: false
+  site_pv: false
+  page_pv: false
 
 # --------------------------------------
 # Math
@@ -663,6 +664,7 @@ artalk:
   site:
   # Use Artalk visitor count as the page view count
   visitor: false
+  vote: false
   option:
 
 # --------------------------------------
