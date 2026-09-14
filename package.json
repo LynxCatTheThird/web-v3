@@ -41,7 +41,7 @@
     "hexo-server": "^3.0.0",
     "hexo-yam": "github:curbengh/hexo-yam",
     "katex": "^0.18.3",
-    "markdown-it": "^14.3.0",
+    "markdown-it": "^15.0.2",
     "markdown-it-anchor": "^9.2.1"
   }
 }
