@@ -13,19 +13,19 @@
     "version": "8.1.2"
   },
   "dependencies": {
-    "@mdit/plugin-abbr": "^1.0.2",
-    "@mdit/plugin-dl": "^1.0.3",
-    "@mdit/plugin-footnote": "^1.0.2",
-    "@mdit/plugin-ins": "^2.0.1",
-    "@mdit/plugin-katex": "^1.0.2",
-    "@mdit/plugin-mark": "^2.0.1",
-    "@mdit/plugin-spoiler": "^2.0.1",
-    "@mdit/plugin-sub": "^1.0.3",
-    "@mdit/plugin-sup": "^1.0.3",
-    "@mdit/plugin-tasklist": "^1.0.2",
+    "@mdit/plugin-abbr": "^1.1.1",
+    "@mdit/plugin-dl": "^1.1.1",
+    "@mdit/plugin-footnote": "^1.1.1",
+    "@mdit/plugin-ins": "^2.1.1",
+    "@mdit/plugin-katex": "^1.1.1",
+    "@mdit/plugin-mark": "^2.1.1",
+    "@mdit/plugin-spoiler": "^2.1.1",
+    "@mdit/plugin-sub": "^1.1.1",
+    "@mdit/plugin-sup": "^1.1.1",
+    "@mdit/plugin-tasklist": "^1.1.1",
     "hexo": "^8.1.2",
     "hexo-abbrlink": "^2.2.1",
-    "hexo-blog-encrypt": "^4.0.2",
+    "hexo-blog-encrypt": "^4.0.3",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-generator-archive": "^2.0.0",
@@ -40,8 +40,8 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-yam": "github:curbengh/hexo-yam",
-    "katex": "^0.18.3",
-    "markdown-it": "^14.3.0",
-    "markdown-it-anchor": "^9.2.1"
+    "katex": "^0.18.7",
+    "markdown-it": "^15.0.2",
+    "markdown-it-anchor": "^10.0.0"
   }
 }
