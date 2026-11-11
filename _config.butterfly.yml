@@ -304,7 +304,7 @@ aside:
       link: https://github.com/LynxCatTheThird
   card_announcement:
     enable: true
-    content: 窝放假啦，啊哈哈哈
+    content: 喵喵喵喵~
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -322,7 +322,7 @@ aside:
   card_categories:
     enable: true
     # If set 0 will show all
-    limit: 0
+    limit: 8
     # Choose: none / true / false
     expand: false
     sort_order:
@@ -373,20 +373,6 @@ aside:
 # The distance between the bottom right button and the bottom (default unit: px)
 rightside_bottom:
 
-# Conversion between Traditional and Simplified Chinese
-translate:
-  enable: false
-  # The text of a button
-  default: 繁
-  # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
-  defaultEncoding: 2
-  # Time delay
-  translateDelay: 0
-  # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: "繁"
-  # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: "簡"
-
 # Read Mode
 readmode: true
 
@@ -407,15 +393,14 @@ darkmode:
 # Show scroll percent in scroll-to-top button
 rightside_scroll_percent: true
 
-# Don't modify the following settings unless you know how they work
-# Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
+# Choose: readmode,darkmode,hideAside,toc,comment
 # Don't repeat the same value
 rightside_item_order:
   enable: true
-  # Default: readmode,translate,darkmode,hideAside
-  hide: readmode,darkmode,hideAside #,translate
-  # Default: toc,chat,comment
-  show: toc,comment #,chat
+  # Default: readmode,darkmode,hideAside
+  hide: readmode,darkmode,hideAside
+  # Default: toc,comment
+  show: toc,comment
 
 # Animation for the bottom right config button
 rightside_config_animation: true
@@ -439,7 +424,6 @@ copy:
     enable: false
     limit_count: 150
 
-# Need to install the hexo-wordcount plugin
 wordcount:
   enable: true
   # Display the word count of the article in post meta
@@ -449,11 +433,22 @@ wordcount:
   # Display the total word count of the website in aside's webinfo
   total_wordcount: true
 
-# Busuanzi count for PV / UV in site
-busuanzi:
+# Visitor counter: Vercount by default. UV = unique visitors, PV = page views.
+visitor_counter:
   site_uv: false
   site_pv: false
   page_pv: false
+  api_url: https://events.vercount.one/api/v2/log
+  timeout: 5000 # ms
+  # Optional custom IDs/classes. Defaults: vercount_value_site_uv/site_pv/page_pv.
+  element_id:
+    site_uv:
+    site_pv:
+    page_pv:
+  element_class:
+    site_uv:
+    site_pv:
+    page_pv:
 
 # --------------------------------------
 # Math
@@ -470,10 +465,20 @@ math:
   hide_scrollbar: true
 
   mathjax:
+    # Load chemical equation support only when enabled.
+    mhchem: false
     # Enable the contextual menu
     enableMenu: true
     # Choose: all / ams / none, This controls whether equations are numbered and how
     tags: none
+    # MathJax loader, output, TeX, CHTML and document options.
+    loader: {}
+    output: {}
+    tex: {}
+    chtml:
+      scale: 1.1
+    options:
+      lazyMargin: 200px
 
   katex:
     # Enable the copy KaTeX formula
@@ -487,7 +492,7 @@ search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
   use: local_search
-  placeholder:
+  placeholder: 搜索...
 
   # Algolia Search
   algolia_search:
@@ -500,8 +505,6 @@ search:
     preload: false
     # Show top n results per article, show all results by setting to -1
     top_n_per_article: 1
-    # Unescape html strings to the readable one.
-    unescape: false
     # Enable pagination for search results
     pagination:
       enable: false
@@ -514,27 +517,10 @@ search:
   docsearch:
     appId:
     apiKey:
-    indexName:
+    # DocSearch v4/v5 index list. Accepts a string, a list of index names,
+    # or a list of { name, searchParameters } objects.
+    indices:
     option:
-
-# --------------------------------------
-# Share System
-# --------------------------------------
-
-share:
-  # Choose: sharejs / addtoany
-  # Leave it empty if you don't need share
-  use:
-
-  # Share.js
-  # https://github.com/overtrue/share.js
-  sharejs:
-    sites: wechat,weibo,qq,qzone,x,facebook
-
-  # AddToAny
-  # https://www.addtoany.com/
-  addtoany:
-    item: facebook,x,wechat,sina_weibo,facebook_messenger,email,copy_link
 
 # --------------------------------------
 # Comments System
@@ -543,9 +529,9 @@ share:
 comments:
   # Up to two comments system, the first will be shown as default
   # Leave it empty if you don't need comments
-  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  # Format of two comments system : Disqus,Waline
-  use: Twikoo
+  # Choose: Artalk/Twikoo/Waline
+  # Format of two comments system : Artalk,Waline
+  use:
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -556,105 +542,21 @@ comments:
   # Display comment count in Home Page
   card_post_count: false
 
-# Disqus
-# https://disqus.com/
-disqus:
-  shortname:
-  # For newest comments widget
-  apikey:
-
-# Alternative Disqus - Render comments with Disqus API
-# https://github.com/SukkaW/DisqusJS
-disqusjs:
-  shortname:
-  apikey:
-  option:
-
-# Livere
-# https://www.livere.com/
-livere:
-  uid:
-
-# Gitalk
-# https://github.com/gitalk/gitalk
-gitalk:
-  client_id:
-  client_secret:
-  repo:
-  owner:
-  admin:
-  option:
-
-# Valine
-# https://valine.js.org
-valine:
-  appId:
-  appKey:
-  avatar: monsterid
-  # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  serverURLs:
-  bg:
-  # Use Valine visitor count as the page view count
-  visitor: false
-  option:
-
-# Waline - A simple comment system with backend support fork from Valine
+# Waline
 # https://waline.js.org/
 waline:
   serverURL:
   bg:
-  # Use Waline pageview count as the page view count
+  # Use Waline for the article view count when it is the active comment system.
   pageview: false
   option:
-
-# Utterances
-# https://utteranc.es/
-utterances:
-  repo:
-  # Issue Mapping: pathname/url/title/og:title
-  issue_term: pathname
-  # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
-  light_theme: github-light
-  dark_theme: photon-dark
-  js:
-  option:
-
-# Facebook Comments Plugin
-# https://developers.facebook.com/docs/plugins/comments/
-facebook_comments:
-  app_id:
-  # optional
-  user_id:
-  pageSize: 10
-  # Choose: social / time / reverse_time
-  order_by: social
-  lang: en_US
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://twikoo.lynx3.me/
+  envId:
   region:
-  # Use Twikoo visitor count as the page view count
   visitor: false
-  option:
-
-# Giscus
-# https://giscus.app/
-giscus:
-  repo:
-  repo_id:
-  category_id:
-  light_theme: light
-  dark_theme: dark
-  js:
-  option:
-
-# Remark42
-# https://remark42.com/docs/configuration/frontend/
-remark42:
-  host:
-  siteId:
   option:
 
 # Artalk
@@ -662,99 +564,10 @@ remark42:
 artalk:
   server:
   site:
-  # Use Artalk visitor count as the page view count
   visitor: false
+  # Page voting; comment voting uses option.vote.
   vote: false
   option:
-
-# --------------------------------------
-# Chat Services
-# --------------------------------------
-
-chat:
-  # Choose: chatra/tidio/crisp/knocket
-  # Leave it empty if you don't need chat
-  use:
-  # Chat Button [recommend]
-  # It will create a button in the bottom right corner of website, and hide the origin button
-  rightside_button: false
-  # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-  button_hide_show: false
-
-# https://chatra.io/
-chatra:
-  id:
-
-# https://www.tidio.com/
-tidio:
-  public_key:
-
-# https://crisp.chat/en/
-crisp:
-  website_id:
-
-# https://trtc.io/solutions/knocket
-knocket:
-  identifier:
-
-# --------------------------------------
-# Analysis
-# --------------------------------------
-
-# https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
-
-# https://analytics.google.com/analytics/web/
-google_analytics:
-
-# https://www.cloudflare.com/zh-tw/web-analytics/
-cloudflare_analytics:
-
-# https://clarity.microsoft.com/
-microsoft_clarity:
-
-# https://umami.is/
-umami_analytics:
-  enable: false
-  # For self-hosted setups, configure the hostname of the Umami instance
-  serverURL:
-  script_name: script.js
-  website_id:
-  option:
-  UV_PV:
-    site_uv: false
-    site_pv: false
-    page_pv: false
-    # Umami Cloud (API key) / self-hosted Umami (token)
-    token:
-
-# https://www.googletagmanager.com/
-google_tag_manager:
-  tag_id:
-  # optional
-  domain:
-
-# --------------------------------------
-# Advertisement
-# --------------------------------------
-
-# Google Adsense
-google_adsense:
-  enable: false
-  auto_ads: true
-  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client:
-  enable_page_level_ads: true
-
-# Insert ads manually
-# Leave it empty if you don't need ads
-ad:
-  # Insert ads in the index (every three posts)
-  index:
-  # Insert ads in aside
-  aside:
-  # Insert ads in the post (before pagination)
-  post:
 
 # --------------------------------------
 # Verification
@@ -835,7 +648,6 @@ beautify:
   title_prefix_icon_color:
 
 # Global font settings
-# Don't modify the following settings unless you know how they work
 font:
   global_font_size: 16px
   code_font_size:
@@ -927,6 +739,8 @@ clickShowText:
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
 lightbox: fancybox
+# Options for the selected lightbox.
+lightbox_options: {}
 
 # --------------------------------------
 # Tag Plugins settings
@@ -961,12 +775,27 @@ mermaid:
   open_in_new_tab: true
   # Enable zoom and pan interactions on diagrams
   zoom_pan: true
+  # Global Mermaid options; per-diagram and mode-specific themes take precedence.
+  options: {}
+
+# ECharts JSON code blocks
+echarts:
+  enable: true
+  height: 400 # px
+  init_options:
+    renderer: canvas # canvas / svg; init_options also accepts locale and devicePixelRatio
+  theme:
+    light:
+    dark: dark
+  option:
+    animation: false
 
 # chartjs
 # see https://www.chartjs.org/docs/latest/
 chartjs:
   enable: true
-  # Do not modify unless you understand how they work.
+  # Chart options; individual chart definitions take precedence.
+  options: {}
   # The default settings are only used when the MD syntax is not specified.
   # General font color for the chart
   fontColor:
@@ -999,31 +828,14 @@ note:
 # Other Settings
 # --------------------------------------
 
-# https://github.com/MoOx/pjax
-pjax:
+# Swup navigation and preloading.
+navigation:
   enable: true
-  # Exclude the specified pages from pjax, such as '/music/'
+  cache: true # Cache fetched HTML responses.
+  preload: true # Hover, touch and keyboard focus.
+  timeout: 10000 # Page fetch/script timeout in ms
   exclude:
     # - /xxxxxx/
-
-# Inject the css and script (aplayer/meting)
-aplayerInject:
-  enable: false
-  per_page: true
-
-# Snackbar - Toast Notification
-# https://github.com/polonel/SnackBar
-# position: top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
-snackbar:
-  enable: false
-  position: bottom-left
-  # The background color of Toast Notification in light mode and dark mode
-  bg_light: "#49b1f5"
-  bg_dark: "#1f1f1f"
-
-# Instant.page
-# https://instant.page/
-instantpage: true
 
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
@@ -1075,20 +887,19 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
+    - <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     - <link rel="stylesheet" href="/css/custom.css">
     # - <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
-    - <link rel="stylesheet" href="https://registry.npmmirror.com/@fontsource/jetbrains-mono/5.1.2/files/latin-400.css">
+    - <link rel="stylesheet" href="https://registry.npmmirror.com/@fontsource/jetbrains-mono/5.3.0/files/latin-400.css">
   bottom:
     # - <script src="https://example.org/main.js"></script>
 
 # CDN Settings
-# Don't modify the following settings unless you know how they work
 CDN:
-  # The CDN provider for internal and third-party scripts
-  # Options for both: local/jsdelivr/unpkg/cdnjs/custom
-  # Note: Dev version can only use 'local' for internal scripts
+  # Internal scripts: local, or a custom CDN serving this fork.
   # Note: When setting third-party scripts to 'local', you need to install hexo-butterfly-extjs
   internal_provider: local
+  # Third-party scripts: local/jsdelivr/unpkg/cdnjs/custom
   third_party_provider: custom
 
   # Add version number to url, true or false
@@ -1106,37 +917,27 @@ CDN:
   # custom_format: https://sf.akass.cn/${cdnjs_name}/${version}/${min_cdnjs_file}
 
   option:
+    swup: https://cdnjs.cloudflare.com/ajax/libs/swup/4.10.0/Swup.umd.min.js
     # abcjs_basic_js:
     # activate_power_mode:
     # algolia_js:
     # algolia_search:
-    # aplayer_css:
-    # aplayer_js:
     # artalk_css:
     # artalk_js:
-    # blueimp_md5:
-    busuanzi: https://cn.vercount.one/js
     # canvas_fluttering_ribbon:
     # canvas_nest:
     # canvas_ribbon:
     # chartjs:
     # click_heart:
     # clickShowText:
-    # disqusjs:
-    # disqusjs_css:
     # docsearch_css:
     # docsearch_js:
-    egjs_infinitegrid: https://s4.zstatic.net/ajax/libs/egjs-infinitegrid/4.12.0/infinitegrid.min.js
+    # egjs_infinitegrid:
     # fancybox:
     # fancybox_css:
     # fireworks:
     # fontawesome:
-    # gitalk:
-    # gitalk_css:
-    # giscus:
-    instantpage: https://s4.zstatic.net/ajax/libs/instant.page/5.2.0/instantpage.min.js
     # katex:
-    # katex_copytex:
     # lazyload:
     # local_search:
     # main:
@@ -1144,19 +945,11 @@ CDN:
     # mathjax:
     # medium_zoom:
     # mermaid:
-    # meting_js:
     # prismjs_autoloader:
     # prismjs_js:
     # prismjs_lineNumber_js:
-    pjax: https://s4.zstatic.net/ajax/libs/pjax/0.2.8/pjax.min.js
-    # sharejs:
-    # sharejs_css:
-    # snackbar:
-    # snackbar_css:
-    # translate:
     # twikoo:
     # typed:
     # utils:
-    # valine:
     # waline_css:
     # waline_js:
