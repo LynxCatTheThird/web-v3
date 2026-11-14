@@ -1,4 +1,4 @@
-# General
+# 通用临时文件
 logs
 *.log
 npm-debug.log*
@@ -12,21 +12,21 @@ public/
 .deploy*/
 _multiconfig.yml
 
-# Tools
+# 本地工具
 t
 t.exe
 
-# Debug & Develop
-themes/butterfly_dev/
+# 调试与开发
+themes/dragonfly_dev/
 .vscode/
 pnpm-workspace.yaml
 
-# Packages
+# 依赖与锁文件
 package-lock.json
 npm-shrinkwrap.json
 yarn.lock
 pnpm-lock.yaml
 node_modules/
 
-# Sources
+# 站点内容
 source/

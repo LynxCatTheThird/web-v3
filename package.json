@@ -5,11 +5,11 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
-    "test": "npm --prefix themes/butterfly test",
+    "test": "npm --prefix themes/dragonfly test",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "postinstall": "npm --prefix themes/butterfly install --omit=dev --no-package-lock"
+    "postinstall": "npm --prefix themes/dragonfly install --omit=dev --no-package-lock"
   },
   "hexo": {
     "version": "8.1.2"

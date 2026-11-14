@@ -1,0 +1,697 @@
+# SPDX-License-Identifier: Apache-2.0
+# Dragonfly 项目修改；来源与署名见主题 NOTICE。
+# 配置指南：主题目录中的 docs/configuration.md
+
+# 站点标识与菜单
+# ────────────────────────────────
+
+# 站点图标；主题内置 SVG 与 ICO。
+favicon: /favicon.ico
+
+# 头像及悬停旋转效果。
+avatar:
+  img: https://s2.hdslb.com/bfs/face/55653dbd3d6e3d685896bcd10242aa9585d28f56.jpg@1e_0c.webp
+  effect: false
+
+nav:
+  # 导航栏标志图片。
+  logo: null
+  display_title: true
+  display_post_title: true
+  # 固定导航栏。
+  fixed: false
+
+# 格式：名称: 路径 || Font Awesome 图标；子菜单可使用嵌套对象。
+menu:
+  主页: / || fas fa-home
+  时间线: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  交流||fas fa-list:
+    友链: /link/ || fas fa-link
+    留言板: /comment/ || fas fa-share-nodes
+  关于||fas fa-list:
+    关于我: /about/ || fas fa-user
+    条款与政策: /policy/ || fas fa-envelope-open-text
+    AI 标识说明: /policy/ai/ || fas fa-carrot
+
+# 格式：图标: 链接 || 描述 || 颜色。
+social:
+  fab fa-github: https://github.com/LynxCatTheThird/ || GitHub || '#24292e'
+  fab fa-twitter: https://twitter.com/LynxCatTheThird/ || Twitter || '#1da1f2'
+  fab fa-telegram: https://t.me/LynxCatTheThird/ || Telegram || '#2ca5e0'
+  fas fa-rss: /rss2.xml || RSS || '#f26522'
+
+
+# 外观与布局
+# ────────────────────────────────
+
+# 初始配色：light / dark。
+display_mode: light
+
+darkmode:
+  enable: true
+  button: true
+  # 自动切换：1 跟随系统，2 按时间，false 关闭。
+  autoChangeMode: 1
+  start: null
+  end: null
+
+# 支持颜色、图片地址或数组；数组每次随机选择一项。
+background: null
+
+# 字号可带 px、rem 等单位；字体名称按 CSS font-family 语法填写。
+font:
+  global_font_size: 16px
+  code_font_size: null
+  font_family: '''Noto Sans CJK SC'', ''Microsoft YaHei'', sans-serif'
+  code_font_family: '''JetBrains Mono'', ''Noto Sans CJK SC'', ''Microsoft YaHei'', sans-serif'
+
+# 标题专用字体及其样式表地址。
+blog_title_font:
+  font_link: null
+  font_family: null
+
+rounded_corners_ui: true
+
+text_align_justify: false
+
+mask:
+  header: true
+  footer: true
+
+# 分隔线图标：使用 Font Awesome 的 Unicode 编码。
+hr_icon:
+  enable: true
+  icon: null
+  icon_top: null
+
+# 侧栏位置、显示范围与卡片。
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: null
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me!
+      link: https://github.com/LynxCatTheThird
+  card_announcement:
+    enable: true
+    content: 喵喵喵喵~
+  card_recent_post:
+    enable: true
+    # 0 表示显示全部文章。
+    limit: 5
+    sort: date
+    sort_order: null
+  card_newest_comments:
+    enable: false
+    sort_order: null
+    limit: 6
+    # 评论缓存时长，单位：分钟。
+    storage: 10
+    avatar: true
+  card_categories:
+    enable: true
+    limit: 8
+    expand: false
+    sort_order: null
+  card_tags:
+    enable: true
+    limit: 40
+    color: false
+    custom_colors: null
+    # 标签排序：random / name / length。
+    orderby: random
+    # 1 升序，-1 降序。
+    order: 1
+    sort_order: null
+  card_archives:
+    enable: true
+    # 归档粒度：monthly / yearly。
+    type: monthly
+    format: YYYY 年 MM 月
+    order: -1
+    limit: 8
+    sort_order: null
+  card_post_series:
+    enable: true
+    series_title: false
+    # 系列排序字段：title / date。
+    orderBy: date
+    order: -1
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order: null
+    runtime_date: null
+
+# 页脚导航、站点署名与主题信息。
+footer:
+  nav: null
+  owner:
+    enable: true
+    # 站点起始年份。
+    since: 2020
+  # 主题与 Hexo 的署名及版本显示。
+  copyright:
+    enable: true
+    version: true
+  custom_text: <a href="https://icp.gov.moe/?keyword=20231970">萌 ICP 备 20231970 号</a>
+
+# 右侧工具栏距底部的距离，如 20px。
+rightside_bottom: null
+
+rightside_scroll_percent: true
+
+# 工具栏排序；hide 与 show 使用逗号分隔名称，项目不重复。
+rightside_item_order:
+  enable: true
+  hide: readmode,darkmode,hideAside
+  show: toc,comment
+
+rightside_config_animation: true
+
+
+# 封面与图片
+# ────────────────────────────────
+
+# 关闭页面顶部封面。
+disable_top_img: false
+
+# 页面未指定封面时使用的图片。
+default_top_img: https://s2.hdslb.com/bfs/openplatform/6e7138fb1c7c8fd8262689d4f145ca070bb0eae4.png@1e_0c.webp
+
+index_img: https://s2.hdslb.com/bfs/openplatform/2c9190995d75dccaf40b60aa51fe0a6c240431a6.png@1e_0c.webp
+
+archive_img: null
+
+tag_img: null
+
+# 按标签名称指定封面。
+tag_per_img: null
+
+category_img: null
+
+# 按分类名称指定封面。
+category_per_img: null
+
+footer_img: linear-gradient(to right, rgb(0, 180, 219), rgb(0, 131, 176));
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  # 文章未设置 cover 时使用的封面列表。
+  default_cover: null
+
+# 图片加载失败时的替代图。
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+# 内置 404 页的提示与背景。
+error_404:
+  enable: true
+  subtitle: Page Not Found
+  background: https://s2.hdslb.com/bfs/article/a59ff0700a2c75cbec29af244d3068f91352440272.png@1e_0c.webp
+
+# 使用图片说明生成可见图注。
+photofigcaption: false
+
+# 普通文章图默认保留真实地址并使用浏览器原生懒加载。
+lazyload:
+  enable: true
+  # false 切换到 vanilla-lazyload。loading=eager 或 fetchpriority=high 保留关键图片。
+  native: true
+  # 作用范围：post / site。
+  field: post
+  # 旧插件模式的占位图。
+  placeholder: null
+  blur: false
+
+# 图片查看器：fancybox / medium_zoom；留空关闭。
+lightbox: fancybox
+
+# 传给所选图片查看器的参数。
+lightbox_options: {}
+
+
+# 首页与归档
+# ────────────────────────────────
+
+# 首页标题区域的位置，如 30% 或 300px。
+index_site_info_top: null
+
+# 首页封面高度，如 100vh 或 400px。
+index_top_img_height: null
+
+# 1 左图，2 右图，3 交替，4 上图，5 文字叠图，6 上图瀑布流，7 叠图瀑布流。
+index_layout: 3
+
+index_post_content:
+  # 摘要来源：1 description，2 优先 description，3 自动摘要，false 关闭。
+  method: 2
+  # 自动摘要的字符数。
+  length: 500
+
+subtitle:
+  enable: false
+  effect: true
+  typed_option: null
+  # 第三方副标题：1 一言，2 aa1.cn，3 今日诗词，false 使用 sub。
+  source: false
+  # 自定义副标题列表。关闭打字效果时显示第一项。
+  sub: null
+
+# 分类页样式：index 使用首页布局，留空使用归档布局。
+category_ui: null
+
+# 标签页样式：index 使用首页布局，留空使用归档布局。
+tag_ui: null
+
+
+# 文章阅读
+# ────────────────────────────────
+
+post_meta:
+  page:
+    # 日期：created / updated / both。
+    date_type: created
+    # 格式：date / relative。
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    position: left
+    # 日期：created / updated / both。
+    date_type: both
+    # 格式：date / relative。
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+# 文章与独立页面的目录开关、层级和阅读进度。
+toc:
+  post: true
+  page: true
+  number: true
+  expand: true
+  style_simple: false
+  scroll_percent: true
+
+readmode: true
+
+# 标题锚点与地址栏同步。
+anchor:
+  auto_update: false
+  click_to_scroll: true
+
+# 复制功能及达到指定字数后附加的署名。
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 150
+
+# 文章内容许可，独立于主题代码的 Apache-2.0 许可。
+post_copyright:
+  enable: true
+  decode: false
+  author_href: null
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# 在线编辑地址前缀，如 https://github.com/用户/仓库/edit/main/source/。
+post_edit:
+  enable: false
+  url: null
+
+# 赞赏文案和二维码列表；每项可含 img、link、text。
+reward:
+  enable: false
+  text: null
+  QR_code: null
+
+related_post:
+  enable: false
+  limit: 6
+  date_type: created
+
+# 1 下一篇指向旧文章，2 指向新文章，false 关闭。
+post_pagination: false
+
+noticeOutdate:
+  enable: false
+  style: flat
+  # 超过此天数后显示文章过期提示。
+  limit_day: 365
+  # 提示位置：top / bottom。
+  position: top
+  message_prev: 此文章最后更新于
+  message_next: 天前，文章的内容可能已过时。
+
+# 字数与阅读时间统计，需要站点安装 hexo-wordcount。
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+
+# 内容渲染
+# ────────────────────────────────
+
+markdown:
+  # auto 保留已安装的渲染器；theme 使用内置渲染器；external 使用站点渲染器。
+  renderer: theme
+
+code_blocks:
+  # 代码配色：darker / pale night / light / ocean / false。
+  theme: light
+  macStyle: true
+  # 代码块高度上限，单位：px；false 不限制。
+  height_limit: 200
+  word_wrap: false
+  copy: true
+  language: true
+  # true 折叠，false 展开，none 展开并隐藏折叠按钮。
+  shrink: false
+  fullpage: true
+
+math:
+  # 默认公式引擎：katex / mathjax；留空关闭。
+  use: katex
+  # true 应用于所有页面；false 由文章 math 字段选择。
+  per_page: true
+  hide_scrollbar: true
+  mathjax:
+    # server 构建 SVG；client 在浏览器渲染。
+    render: server
+    # 启用化学公式扩展。
+    mhchem: false
+    enableMenu: true
+    # 公式编号：all / ams / none。
+    tags: none
+    loader: {}
+    output: {}
+    tex: {}
+    chtml:
+      scale: 1.1
+    options:
+      lazyMargin: 200px
+  katex:
+    # 启用构建时化学公式。
+    mhchem: true
+    options: {}
+    # 复制公式时保留 TeX 源码。
+    copy_tex: true
+
+beautify:
+  enable: true
+  # 文章美化范围：post / site。
+  field: site
+  # 标题前缀图标的 Font Awesome Unicode 编码。
+  title_prefix_icon: \f101
+  title_prefix_icon_color: null
+
+series:
+  enable: false
+  # 系列排序字段：title / date。
+  orderBy: title
+  # 1 升序，-1 降序。
+  order: 1
+  number: true
+
+note:
+  # 提示块样式：simple / modern / flat / disabled。
+  style: flat
+  icons: true
+  border_radius: 3
+  # 背景亮度偏移百分比，同时作用于 label 标签。
+  light_bg_offset: 0
+
+abcjs:
+  enable: false
+  # 在页面按需初始化 ABC 乐谱。
+  per_page: true
+
+mermaid:
+  enable: true
+  # 解析 Mermaid 围栏代码块。
+  code_write: false
+  # 浅色和深色模式的图表主题。
+  theme:
+    light: default
+    dark: dark
+  open_in_new_tab: true
+  zoom_pan: true
+  # 全局参数；单张图表和当前配色主题优先。
+  options: {}
+
+echarts:
+  enable: true
+  # 图表默认高度，单位：px。
+  height: 400
+  # 初始化参数，可设置 renderer、locale、devicePixelRatio。
+  init_options:
+    renderer: canvas
+  theme:
+    light: null
+    dark: dark
+  option:
+    animation: false
+
+chartjs:
+  enable: true
+  # 全局参数，单张图表的定义优先。
+  options: {}
+  fontColor:
+    light: rgba(0, 0, 0, 0.8)
+    dark: rgba(255, 255, 255, 0.8)
+  borderColor:
+    light: rgba(0, 0, 0, 0.1)
+    dark: rgba(255, 255, 255, 0.2)
+  scale_ticks_backdropColor:
+    light: transparent
+    dark: transparent
+
+
+# 搜索与评论
+# ────────────────────────────────
+
+search:
+  # 搜索服务：local_search / algolia_search / docsearch；留空关闭。
+  use: local_search
+  placeholder: 搜索...
+  algolia_search:
+    hitsPerPage: 6
+  local_search:
+    # 页面加载后提前下载索引。
+    preload: false
+    # 每篇文章的命中摘要数，-1 显示全部。
+    top_n_per_article: 1
+    pagination:
+      enable: false
+      hitsPerPage: 8
+    # 自定义索引地址；留空使用站点生成的 search.path。
+    CDN: null
+  docsearch:
+    appId: null
+    apiKey: null
+    # 索引名、索引名数组或包含 name、searchParameters 的对象数组。
+    indices: null
+    option: null
+
+comments:
+  # 最多选择两个：Artalk、Twikoo、Waline；第一个默认显示。
+  use: null
+  text: true
+  # 评论区域进入视口时加载；文章头部计数需要提前加载。
+  lazyload: false
+  count: false
+  card_post_count: false
+
+artalk:
+  server: null
+  site: null
+  visitor: false
+  # 文章投票；评论投票使用 option.vote。
+  vote: false
+  option: null
+
+twikoo:
+  envId: null
+  region: null
+  visitor: false
+  option: null
+
+waline:
+  serverURL: null
+  bg: null
+  # 使用 Waline 提供当前文章的阅读量。
+  pageview: false
+  option: null
+
+
+# 统计与搜索引擎
+# ────────────────────────────────
+
+# 默认使用 Vercount；UV 为独立访客，PV 为浏览次数。
+visitor_counter:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+  api_url: https://events.vercount.one/api/v2/log
+  # 请求超时，单位：毫秒。
+  timeout: 5000
+  # 可覆盖默认的 vercount_value_site_uv、site_pv、page_pv 元素 ID。
+  element_id:
+    site_uv: null
+    site_pv: null
+    page_pv: null
+  element_class:
+    site_uv: null
+    site_pv: null
+    page_pv: null
+
+# 验证标签列表，每项包含 name 与 content。
+site_verification: null
+
+# Open Graph 元信息，option 传给 Hexo open_graph。
+Open_Graph_meta:
+  enable: true
+  option:
+    twitter_card: summary_large_image
+    twitter_id: '@LynxCatTheThird'
+
+structured_data:
+  enable: true
+  # 站点别名数组，用于结构化数据。
+  alternate_name: null
+
+
+# 动效与加载
+# ────────────────────────────────
+
+preloader:
+  enable: false
+  # 加载提示：1 全屏动画，2 Pace 进度条。
+  source: 1
+  # Pace 自定义样式表地址。
+  pace_css_url: null
+
+# 页面进入动画；系统减少动态效果偏好优先。
+enter_transitions: true
+
+activate_power_mode:
+  enable: false
+  colorful: true
+  shake: true
+  mobile: false
+
+canvas_ribbon:
+  enable: false
+  size: 150
+  # 彩带不透明度，范围：0–1。
+  alpha: 0.6
+  zIndex: -1
+  click_to_change: false
+  mobile: false
+
+canvas_fluttering_ribbon:
+  enable: false
+  mobile: false
+
+canvas_nest:
+  enable: false
+  # 线条 RGB 值，用逗号分隔，如 0,0,255。
+  color: 0,0,255
+  # 线条不透明度，范围：0–1。
+  opacity: 0.7
+  zIndex: -1
+  count: 99
+  mobile: false
+
+fireworks:
+  enable: false
+  zIndex: 9999
+  mobile: false
+
+click_heart:
+  enable: false
+  mobile: false
+
+clickShowText:
+  enable: false
+  text: null
+  fontSize: 15px
+  random: false
+  mobile: false
+
+
+# 导航与资源
+# ────────────────────────────────
+
+# Swup 导航、页面缓存与预加载。
+navigation:
+  enable: true
+  cache: true
+  # 鼠标悬停、触摸或键盘聚焦时预加载。
+  preload: true
+  # 页面和脚本加载超时，单位：毫秒。
+  timeout: 10000
+  # 使用完整页面跳转的站点路径列表。
+  exclude: null
+
+CDN:
+  # 主题内部代码：local / custom。
+  internal_provider: local
+  # 第三方资源：local / jsdelivr / unpkg / cdnjs / custom。
+  third_party_provider: custom
+  version: false
+  # 占位符：name、version、file、min_file、cdnjs_name、cdnjs_file、min_cdnjs_file。
+  # 示例：https://registry.npmmirror.com/${name}/${version}/files/${file}
+  custom_format: https://registry.npmmirror.com/${name}/${version}/files/${file}
+  # 按资源键覆盖地址；第三方键见 plugins.yml。
+  option:
+    swup: https://cdnjs.cloudflare.com/ajax/libs/swup/4.10.0/Swup.umd.min.js
+
+# 通过 Stylus 添加浏览器样式前缀。
+css_prefix: true
+
+
+# 应用与扩展
+# ────────────────────────────────
+
+# 配合站点的离线插件提供 manifest 与图标。
+pwa:
+  enable: false
+  manifest: null
+  apple_touch_icon: null
+  favicon_32_32: null
+  favicon_16_16: null
+  mask_icon: null
+
+# head 在 </head> 前注入，bottom 在 </body> 前注入。
+inject:
+  head:
+    - <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    - <link rel="stylesheet" href="/css/custom.css">
+    - >-
+      <link rel="stylesheet"
+      href="https://registry.npmmirror.com/@fontsource/jetbrains-mono/5.3.0/files/latin-400.css">
+  bottom: null
