@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Dragonfly 项目修改；来源与署名见主题 NOTICE。
 # 配置指南：主题目录中的 docs/configuration.md
+# 示例配置行可取消注释，保留缩进；分组标题和说明保持注释。
 
 # 站点标识与菜单
 # ────────────────────────────────
@@ -63,8 +64,29 @@ darkmode:
   # 日间结束小时，留空按 18 处理；手动选择的配色优先于自动判断。
   end: null
 
+# 自定义主题配色：需要时取消下列整个配置块的注释；颜色值保留引号。
+# theme_color:
+#   enable: true
+#   main: '#49b1f5'
+#   paginator: '#00c4b6'
+#   button_hover: '#ff7242'
+#   text_selection: '#00c4b6'
+#   link_color: '#99a9bf'
+#   meta_color: '#858585'
+#   hr_color: '#a4d8fa'
+#   code_foreground: '#f47466'
+#   code_background: 'rgba(27, 31, 35, .05)'
+#   toc_color: '#00c4b6'
+#   blockquote_padding_color: '#49b1f5'
+#   blockquote_background_color: '#49b1f5'
+#   scrollbar_color: '#49b1f5'
+#   meta_theme_color_light: '#ffffff'
+#   meta_theme_color_dark: '#0d0d0d'
+
 # 支持颜色、图片地址或数组；数组每次随机选择一项。
-background: null
+background:
+  # - '#f5f7fa'
+  # - /img/background.jpg
 
 # 字号可带 px、rem 等单位；字体名称按 CSS font-family 语法填写。
 font:
@@ -158,7 +180,9 @@ aside:
     limit: 40
     # 启用彩色标签；custom_colors 可指定单色或颜色数组。
     color: false
-    custom_colors: null
+    custom_colors:
+      # - '#49b1f5'
+      # - '#00c4b6'
     # 标签排序：random / name / length。
     orderby: random
     # 1 升序，-1 降序。
@@ -194,7 +218,13 @@ aside:
 # 页脚导航、站点署名与主题信息。
 footer:
   # 页脚分组列表，结构与示例见 docs/configuration.md。
-  nav: null
+  nav:
+    # - width: 1
+    #   content:
+    #     - title: 内容
+    #       item:
+    #         - title: 归档
+    #           url: /archives/
   owner:
     enable: true
     # 站点起始年份。
@@ -243,13 +273,15 @@ archive_img: null
 tag_img: null
 
 # 标签名到图片地址的映射，优先于 tag_img。
-tag_per_img: null
+tag_per_img:
+  # 笔记: /img/tags/notes.jpg
 
 # 分类详情页的默认封面。
 category_img: null
 
 # 分类名到图片地址的映射，优先于 category_img。
-category_per_img: null
+category_per_img:
+  # 技术: /img/categories/tech.jpg
 
 # 页脚背景图片；false 使用默认背景。
 footer_img: linear-gradient(to right, rgb(0, 180, 219), rgb(0, 131, 176));
@@ -262,7 +294,9 @@ cover:
   # 在归档列表显示封面。
   archives_enable: true
   # 文章未设置 cover 时使用的封面列表。
-  default_cover: null
+  default_cover:
+    # - /img/cover-1.jpg
+    # - /img/cover-2.jpg
 
 # 图片加载失败时的替代图。
 error_img:
@@ -320,11 +354,15 @@ subtitle:
   # 使用 typed.js 打字动画；关闭时显示第一条可用副标题。
   effect: true
   # 传给 typed.js 的参数对象。
-  typed_option: null
+  typed_option:
+    # typeSpeed: 150
+    # backSpeed: 50
   # 第三方副标题：1 一言，2 aa1.cn，3 今日诗词，false 使用 sub。
   source: false
   # 自定义副标题列表。关闭打字效果时显示第一项。
-  sub: null
+  sub:
+    # - 记录与分享
+    # - 欢迎阅读
 
 # 分类页样式：index 使用首页布局，留空使用归档布局。
 category_ui: null
@@ -407,7 +445,10 @@ post_edit:
 reward:
   enable: false
   text: null
-  QR_code: null
+  QR_code:
+    # - img: /img/reward.png
+    #   link: /img/reward.png
+    #   text: 赞赏二维码
 
 related_post:
   enable: false
@@ -596,12 +637,14 @@ search:
     # 公开的搜索专用 API Key。
     apiKey: null
     # 索引名、索引名数组或包含 name、searchParameters 的对象数组。
-    indices: null
+    indices:
+      # - my-index
     option: null
 
 comments:
   # 最多选择两个：Artalk、Twikoo、Waline；第一个默认显示。
-  use: null
+  use:
+    # - Waline
   # 在双评论系统切换按钮旁显示服务名称。
   text: true
   # 评论区域进入视口时加载；文章头部计数需要提前加载。
@@ -662,19 +705,26 @@ visitor_counter:
     page_pv: null
 
 # 验证标签列表，每项包含 name 与 content。
-site_verification: null
+site_verification:
+  # - name: google-site-verification
+  #   content: 填写服务提供的验证码
 
 # Open Graph 元信息，option 传给 Hexo open_graph。
 Open_Graph_meta:
   enable: true
   option:
+    # twitter_image: /img/share.jpg
+    # twitter_site: '@your_account'
+    # fb_admins:
+    # fb_app_id:
     twitter_card: summary_large_image
     twitter_id: '@LynxCatTheThird'
 
 structured_data:
   enable: true
   # 站点别名数组，用于结构化数据。
-  alternate_name: null
+  alternate_name:
+    # - 我的博客
 
 
 # 动效与加载
@@ -739,7 +789,9 @@ click_heart:
 clickShowText:
   enable: false
   # 待显示文字的数组，如 [欢迎, 阅读]。
-  text: null
+  text:
+    # - 欢迎
+    # - 阅读
   # 文字大小，单位：px。
   fontSize: 15px
   # 随机选择文字；false 按数组顺序显示。
@@ -760,7 +812,8 @@ navigation:
   # 页面和脚本加载超时，单位：毫秒。
   timeout: 10000
   # 精确匹配 pathname，子路径部署需含 root，如 /blog/policy/；查询参数与片段不参与比较。
-  exclude: null
+  exclude:
+    # - /policy/
 
 CDN:
   # 资源分为主题代码和第三方组件，分别选择来源。
@@ -778,7 +831,8 @@ CDN:
   # internal_custom_format: https://cdn.example.com/dragonfly/${version}/${file}
   # 本地调试可启用开发模式，内部资源将使用本地构建。
   # development: false
-  # 单项 URL 覆盖：取消对应行的注释并填入完整地址；其优先级高于 provider。
+  # 单项 URL 覆盖：移除配置行的“# ”并保留缩进，地址填写在冒号后。
+  # 分组空行不影响解析；地址保持单行，空值继续沿用 provider。
   # 开发模式忽略内部资源覆盖；第三方组件仍按这里的地址加载。
   option:
     # 主题内部脚本与样式
@@ -863,4 +917,5 @@ inject:
     - >-
       <link rel="stylesheet"
       href="https://registry.npmmirror.com/@fontsource/jetbrains-mono/5.3.0/files/latin-400.css">
-  bottom: null
+  bottom:
+    # - '<script src="/js/custom-widget.js"></script>'
