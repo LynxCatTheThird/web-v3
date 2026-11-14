@@ -819,13 +819,15 @@ CDN:
   # 资源分为主题代码和第三方组件，分别选择来源。
   # 主题内部代码：local / custom。
   internal_provider: local
-  # 第三方资源：local / jsdelivr / unpkg / cdnjs / custom。
-  third_party_provider: custom
-  # 控制内置 provider 地址的版本标记；custom 模板直接按其占位符展开。
+  # 第三方资源：local / jsdelivr / unpkg / cdnjs / npmmirror / zstatic / custom。
+  third_party_provider: npmmirror
+  # 控制 local/jsdelivr/unpkg 的版本标记；cdnjs/npmmirror/zstatic 主地址固定包含版本。
   version: false
+  # npmmirror 和 zstatic 已内置地址规则，直接选择 provider 即可。
   # 自定义 CDN URL 模板；对应 provider 设为 custom 时使用。
   # 占位符：name、version、file、min_file、cdnjs_name、cdnjs_file、min_cdnjs_file。
   # 示例：https://registry.npmmirror.com/${name}/${version}/files/${file}
+  # 示例：https://s4.zstatic.net/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
   custom_format: https://registry.npmmirror.com/${name}/${version}/files/${file}
   # 主题代码使用自建 CDN 时，将 internal_provider 设为 custom 并填写独立模板。
   # internal_custom_format: https://cdn.example.com/dragonfly/${version}/${file}
