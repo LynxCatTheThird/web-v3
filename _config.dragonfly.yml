@@ -763,18 +763,80 @@ navigation:
   exclude: null
 
 CDN:
+  # 资源分为主题代码和第三方组件，分别选择来源。
   # 主题内部代码：local / custom。
   internal_provider: local
   # 第三方资源：local / jsdelivr / unpkg / cdnjs / custom。
   third_party_provider: custom
   # 控制内置 provider 地址的版本标记；custom 模板直接按其占位符展开。
   version: false
+  # 自定义 CDN URL 模板；对应 provider 设为 custom 时使用。
   # 占位符：name、version、file、min_file、cdnjs_name、cdnjs_file、min_cdnjs_file。
   # 示例：https://registry.npmmirror.com/${name}/${version}/files/${file}
   custom_format: https://registry.npmmirror.com/${name}/${version}/files/${file}
-  # 单项覆盖优先于 provider；开发模式会忽略内部资源的覆盖。第三方键见 plugins.yml。
+  # 主题代码使用自建 CDN 时，将 internal_provider 设为 custom 并填写独立模板。
+  # internal_custom_format: https://cdn.example.com/dragonfly/${version}/${file}
+  # 本地调试可启用开发模式，内部资源将使用本地构建。
+  # development: false
+  # 单项 URL 覆盖：取消对应行的注释并填入完整地址；其优先级高于 provider。
+  # 开发模式忽略内部资源覆盖；第三方组件仍按这里的地址加载。
   option:
-    swup: https://cdnjs.cloudflare.com/ajax/libs/swup/4.10.0/Swup.umd.min.js
+    # 主题内部脚本与样式
+    # main:
+    # utils:
+    # navigation:
+    # local_search:
+    # algolia_js:
+    # echarts_runtime:
+    # main_css:
+
+    # 导航依赖
+    swup: "https://cdnjs.cloudflare.com/ajax/libs/swup/4.10.0/Swup.umd.min.js"
+    # swup_head:
+    # swup_preload:
+    # swup_a11y:
+    # swup_scripts:
+
+    # 搜索与评论
+    # algolia_search:
+    # docsearch_js:
+    # docsearch_css:
+    # artalk_js:
+    # artalk_css:
+    # twikoo:
+    # waline_js:
+    # waline_css:
+
+    # 公式、图表与乐谱
+    # katex:
+    # mathjax:
+    # echarts:
+    # chartjs:
+    # mermaid:
+    # abcjs_basic_js:
+
+    # 图片、字体与代码高亮
+    # fancybox:
+    # fancybox_css:
+    # medium_zoom:
+    # lazyload:
+    # egjs_infinitegrid:
+    # fontawesome: https://cdn.example.com/fontawesome/css/all.min.css
+    # prismjs_js:
+    # prismjs_autoloader:
+    # prismjs_lineNumber_js:
+
+    # 装饰与加载效果
+    # typed:
+    # activate_power_mode:
+    # canvas_ribbon:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    # fireworks:
+    # click_heart:
+    # clickShowText:
+    # pace_js:
+    # pace_default_css:
 
 # 通过 Stylus 添加浏览器样式前缀。
 css_prefix: true
