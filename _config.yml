@@ -55,12 +55,6 @@ prismjs:
   line_number: true
   tab_replace: ""
 
-# Markdown renderer
-markdown:
-  # Render chemistry at build time; disable if unused.
-  katex:
-    mhchem: true
-
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)

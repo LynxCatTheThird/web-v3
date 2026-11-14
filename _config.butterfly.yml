@@ -454,9 +454,11 @@ visitor_counter:
 # Math
 # --------------------------------------
 
-# About the per_page
-# if you set it to true, it will load mathjax/katex script in each page
-# if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' or 'katex: true' in page's front-matter)
+# Per-article override: math: katex / mathjax / false.
+# per_page renders all posts/pages; false requires an article override.
+markdown:
+  renderer: theme
+
 math:
   # Choose: mathjax, katex
   # Leave it empty if you don't need math
@@ -465,6 +467,8 @@ math:
   hide_scrollbar: true
 
   mathjax:
+    # server: build SVG; client: browser rendering with loader/CHTML options.
+    render: server
     # Load chemical equation support only when enabled.
     mhchem: false
     # Enable the contextual menu
@@ -481,6 +485,9 @@ math:
       lazyMargin: 200px
 
   katex:
+    # Build-time chemistry and KaTeX options.
+    mhchem: true
+    options: {}
     # Enable the copy KaTeX formula
     copy_tex: true
 
@@ -840,11 +847,12 @@ navigation:
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
-  # Use browser's native lazyload instead of vanilla-lazyload
-  native: false
+  enable: true
+  # Keep real src/srcset. Use native: false to restore the legacy plugin.
+  # Explicit loading=eager or fetchpriority=high preserves critical images.
+  native: true
   # Specify the field to use lazyload (site or post)
-  field: site
+  field: post
   placeholder:
   blur: false
 
