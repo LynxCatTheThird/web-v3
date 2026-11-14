@@ -16,7 +16,9 @@ avatar:
 nav:
   # 导航栏标志图片。
   logo: null
+  # 显示站点标题；标题文本来自站点配置的 title。
   display_title: true
+  # 滚动文章时在导航栏显示当前文章标题。
   display_post_title: true
   # 固定导航栏。
   fixed: false
@@ -50,11 +52,15 @@ social:
 display_mode: light
 
 darkmode:
+  # 启用深色模式及相关样式切换。
   enable: true
+  # 在右侧工具栏显示手动切换按钮。
   button: true
-  # 自动切换：1 跟随系统，2 按时间，false 关闭。
+  # 1 跟随系统偏好（无结果时按时间）；2 按进入页面时的本地时间；false 关闭自动判断。
   autoChangeMode: 1
+  # 日间开始小时，留空按 6 处理；当前实现中 0 也使用默认值。
   start: null
+  # 日间结束小时，留空按 18 处理；手动选择的配色优先于自动判断。
   end: null
 
 # 支持颜色、图片地址或数组；数组每次随机选择一项。
@@ -62,20 +68,28 @@ background: null
 
 # 字号可带 px、rem 等单位；字体名称按 CSS font-family 语法填写。
 font:
+  # 正文基准字号，如 14px；留空使用 14px。
   global_font_size: 16px
+  # 代码字号，如 13px；留空跟随正文基准字号。
   code_font_size: null
+  # 正文 font-family 列表；字体资源需另行加载。
   font_family: '''Noto Sans CJK SC'', ''Microsoft YaHei'', sans-serif'
+  # 代码 font-family 列表，建议包含等宽字体。
   code_font_family: '''JetBrains Mono'', ''Noto Sans CJK SC'', ''Microsoft YaHei'', sans-serif'
 
 # 标题专用字体及其样式表地址。
 blog_title_font:
+  # 标题字体的 CSS 地址，由主题加载；font_family 填写其中声明的字体名。
   font_link: null
   font_family: null
 
+# 使用圆角卡片与按钮。
 rounded_corners_ui: true
 
+# 正文两端对齐。
 text_align_justify: false
 
+# 为页头、页脚背景添加遮罩，改善文字对比度。
 mask:
   header: true
   footer: true
@@ -84,15 +98,21 @@ mask:
 hr_icon:
   enable: true
   icon: null
+  # 分隔线图标的垂直偏移，如 -10px。
   icon_top: null
 
 # 侧栏位置、显示范围与卡片。
 aside:
   enable: true
+  # 默认收起侧栏，可由工具栏按钮切换。
   hide: false
+  # 显示侧栏开关按钮，需同时启用 aside.enable。
   button: true
+  # 在窄屏显示侧栏内容。
   mobile: true
+  # 侧栏位置：left / right。
   position: right
+  # 分别控制归档、标签和分类详情页的侧栏。
   display:
     archive: true
     tag: true
@@ -112,10 +132,13 @@ aside:
     enable: true
     # 0 表示显示全部文章。
     limit: 5
+    # 最近文章的排序字段：date / updated。
     sort: date
+    # 保留字段；当前卡片顺序由模板决定。
     sort_order: null
   card_newest_comments:
     enable: false
+    # 保留字段；当前卡片顺序由模板决定。
     sort_order: null
     limit: 6
     # 评论缓存时长，单位：分钟。
@@ -123,26 +146,35 @@ aside:
     avatar: true
   card_categories:
     enable: true
+    # 分类条目上限，含子分类；0 显示全部。
     limit: 8
+    # none 展示完整层级；true 默认展开可折叠分组；false 默认折叠。
     expand: false
+    # 保留字段；当前卡片顺序由模板决定。
     sort_order: null
   card_tags:
     enable: true
+    # 显示的标签数量，0 显示全部。
     limit: 40
+    # 启用彩色标签；custom_colors 可指定单色或颜色数组。
     color: false
     custom_colors: null
     # 标签排序：random / name / length。
     orderby: random
     # 1 升序，-1 降序。
     order: 1
+    # 保留字段；当前卡片顺序由模板决定。
     sort_order: null
   card_archives:
     enable: true
     # 归档粒度：monthly / yearly。
     type: monthly
+    # 归档日期格式，如 YYYY年MM月。
     format: YYYY 年 MM 月
     order: -1
+    # 归档条目上限，0 显示全部。
     limit: 8
+    # 保留字段；当前卡片顺序由模板决定。
     sort_order: null
   card_post_series:
     enable: true
@@ -154,11 +186,14 @@ aside:
     enable: true
     post_count: true
     last_push_date: true
+    # 保留字段；当前卡片顺序由模板决定。
     sort_order: null
+    # 站点运行起始日期，如 2026-01-01；留空隐藏运行时长。
     runtime_date: null
 
 # 页脚导航、站点署名与主题信息。
 footer:
+  # 页脚分组列表，结构与示例见 docs/configuration.md。
   nav: null
   owner:
     enable: true
@@ -168,19 +203,24 @@ footer:
   copyright:
     enable: true
     version: true
+  # 追加到页脚的 HTML。
   custom_text: <a href="https://icp.gov.moe/?keyword=20231970">萌 ICP 备 20231970 号</a>
 
 # 右侧工具栏距底部的距离，如 20px。
 rightside_bottom: null
 
+# 在回到顶部按钮中显示阅读进度。
 rightside_scroll_percent: true
 
 # 工具栏排序；hide 与 show 使用逗号分隔名称，项目不重复。
 rightside_item_order:
   enable: true
+  # 折叠组：readmode、darkmode、hideAside；留空沿用默认顺序。
   hide: readmode,darkmode,hideAside
+  # 常显组：toc、comment；留空沿用默认顺序。
   show: toc,comment
 
+# 右侧设置按钮的旋转动效。
 rightside_config_animation: true
 
 
@@ -193,25 +233,33 @@ disable_top_img: false
 # 页面未指定封面时使用的图片。
 default_top_img: https://s2.hdslb.com/bfs/openplatform/6e7138fb1c7c8fd8262689d4f145ca070bb0eae4.png@1e_0c.webp
 
+# 首页顶部封面；留空继承 default_top_img，false 隐藏该封面区域。
 index_img: https://s2.hdslb.com/bfs/openplatform/2c9190995d75dccaf40b60aa51fe0a6c240431a6.png@1e_0c.webp
 
+# 归档页顶部封面；留空继承 default_top_img，false 隐藏。
 archive_img: null
 
+# 标签详情页的默认封面。
 tag_img: null
 
-# 按标签名称指定封面。
+# 标签名到图片地址的映射，优先于 tag_img。
 tag_per_img: null
 
+# 分类详情页的默认封面。
 category_img: null
 
-# 按分类名称指定封面。
+# 分类名到图片地址的映射，优先于 category_img。
 category_per_img: null
 
+# 页脚背景图片；false 使用默认背景。
 footer_img: linear-gradient(to right, rgb(0, 180, 219), rgb(0, 131, 176));
 
 cover:
+  # 在首页文章卡片显示封面。
   index_enable: true
+  # 在侧栏文章卡片显示封面。
   aside_enable: true
+  # 在归档列表显示封面。
   archives_enable: true
   # 文章未设置 cover 时使用的封面列表。
   default_cover: null
@@ -227,7 +275,7 @@ error_404:
   subtitle: Page Not Found
   background: https://s2.hdslb.com/bfs/article/a59ff0700a2c75cbec29af244d3068f91352440272.png@1e_0c.webp
 
-# 使用图片说明生成可见图注。
+# 正文图片的图注优先取 title，其次取 alt。
 photofigcaption: false
 
 # 普通文章图默认保留真实地址并使用浏览器原生懒加载。
@@ -239,6 +287,7 @@ lazyload:
   field: post
   # 旧插件模式的占位图。
   placeholder: null
+  # 旧插件占位图的模糊效果。
   blur: false
 
 # 图片查看器：fancybox / medium_zoom；留空关闭。
@@ -268,7 +317,9 @@ index_post_content:
 
 subtitle:
   enable: false
+  # 使用 typed.js 打字动画；关闭时显示第一条可用副标题。
   effect: true
+  # 传给 typed.js 的参数对象。
   typed_option: null
   # 第三方副标题：1 一言，2 aa1.cn，3 今日诗词，false 使用 sub。
   source: false
@@ -286,6 +337,7 @@ tag_ui: null
 # ────────────────────────────────
 
 post_meta:
+  # 首页文章卡片的元信息。
   page:
     # 日期：created / updated / both。
     date_type: created
@@ -294,7 +346,9 @@ post_meta:
     categories: true
     tags: true
     label: true
+  # 文章页顶部的元信息。
   post:
+    # 文章元信息对齐方式：left / center。
     position: left
     # 日期：created / updated / both。
     date_type: both
@@ -308,16 +362,22 @@ post_meta:
 toc:
   post: true
   page: true
+  # 显示目录编号，可由文章 toc_number 覆盖。
   number: true
+  # 默认展开目录层级，可由文章 toc_expand 覆盖。
   expand: true
+  # 文章页侧栏采用简化目录布局，可由 toc_style_simple 覆盖。
   style_simple: false
   scroll_percent: true
 
+# 显示阅读模式入口，临时隐藏正文以外的界面。
 readmode: true
 
 # 标题锚点与地址栏同步。
 anchor:
+  # 滚动文章时将当前标题锚点写入地址栏。
   auto_update: false
+  # 点击标题时滚动到该标题并更新锚点。
   click_to_scroll: true
 
 # 复制功能及达到指定字数后附加的署名。
@@ -325,12 +385,15 @@ copy:
   enable: true
   copyright:
     enable: false
+    # 选中文本超过此字符数时追加署名；TeX 复制处理后的文本也参与计数。
     limit_count: 150
 
 # 文章内容许可，独立于主题代码的 Apache-2.0 许可。
 post_copyright:
   enable: true
+  # 解码版权区中的文章链接，改善中文路径显示。
   decode: false
+  # 版权区作者名称的链接地址。
   author_href: null
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -348,7 +411,9 @@ reward:
 
 related_post:
   enable: false
+  # 相关文章数量上限。
   limit: 6
+  # 相关文章显示 created 或 updated 日期。
   date_type: created
 
 # 1 下一篇指向旧文章，2 指向新文章，false 关闭。
@@ -356,6 +421,7 @@ post_pagination: false
 
 noticeOutdate:
   enable: false
+  # 提示外观：flat / simple。
   style: flat
   # 超过此天数后显示文章过期提示。
   limit_day: 365
@@ -403,19 +469,26 @@ math:
     render: server
     # 启用化学公式扩展。
     mhchem: false
+    # 客户端渲染模式的右键菜单开关。
     enableMenu: true
     # 公式编号：all / ams / none。
     tags: none
+    # 客户端模式的扩展加载配置。
     loader: {}
+    # 客户端模式的输出参数。
     output: {}
+    # TeX 参数；两种渲染模式均可使用，例如 macros。
     tex: {}
+    # 客户端 CHTML 参数，构建时 SVG 模式不使用此项。
     chtml:
       scale: 1.1
+    # 客户端文档处理参数。
     options:
       lazyMargin: 200px
   katex:
     # 启用构建时化学公式。
     mhchem: true
+    # 传给 KaTeX 的构建参数，例如 macros、strict。
     options: {}
     # 复制公式时保留 TeX 源码。
     copy_tex: true
@@ -446,18 +519,20 @@ note:
 
 abcjs:
   enable: false
-  # 在页面按需初始化 ABC 乐谱。
+  # true 为文章和独立页面注入乐谱初始化；false 时由页面 abcjs: true 开启。
   per_page: true
 
 mermaid:
   enable: true
-  # 解析 Mermaid 围栏代码块。
+  # 适配输出为 pre > code.mermaid 的围栏；内置渲染建议使用 mermaid 标签。
   code_write: false
   # 浅色和深色模式的图表主题。
   theme:
     light: default
     dark: dark
+  # 显示在新标签页查看图表的按钮。
   open_in_new_tab: true
+  # 启用图表缩放与拖动。
   zoom_pan: true
   # 全局参数；单张图表和当前配色主题优先。
   options: {}
@@ -472,6 +547,7 @@ echarts:
   theme:
     light: null
     dark: dark
+  # 默认 ECharts option；与单图 JSON 按顶层键合并，单图同名键优先。
   option:
     animation: false
 
@@ -479,12 +555,15 @@ chartjs:
   enable: true
   # 全局参数，单张图表的定义优先。
   options: {}
+  # 图表默认文字颜色，分别配置浅色和深色模式。
   fontColor:
     light: rgba(0, 0, 0, 0.8)
     dark: rgba(255, 255, 255, 0.8)
+  # 图表默认边框颜色。
   borderColor:
     light: rgba(0, 0, 0, 0.1)
     dark: rgba(255, 255, 255, 0.2)
+  # 雷达图和极坐标图刻度文字的背景色。
   scale_ticks_backdropColor:
     light: transparent
     dark: transparent
@@ -498,6 +577,7 @@ search:
   use: local_search
   placeholder: 搜索...
   algolia_search:
+    # Algolia 每页结果数量。
     hitsPerPage: 6
   local_search:
     # 页面加载后提前下载索引。
@@ -506,11 +586,14 @@ search:
     top_n_per_article: 1
     pagination:
       enable: false
+      # 本地搜索启用分页后的每页结果数量。
       hitsPerPage: 8
     # 自定义索引地址；留空使用站点生成的 search.path。
     CDN: null
   docsearch:
+    # DocSearch 应用 ID。
     appId: null
+    # 公开的搜索专用 API Key。
     apiKey: null
     # 索引名、索引名数组或包含 name、searchParameters 的对象数组。
     indices: null
@@ -519,14 +602,19 @@ search:
 comments:
   # 最多选择两个：Artalk、Twikoo、Waline；第一个默认显示。
   use: null
+  # 在双评论系统切换按钮旁显示服务名称。
   text: true
   # 评论区域进入视口时加载；文章头部计数需要提前加载。
   lazyload: false
+  # 在文章页元信息中显示评论数量。
   count: false
+  # 在首页文章卡片显示评论数量。
   card_post_count: false
 
 artalk:
+  # Artalk 服务地址，需部署服务端。
   server: null
+  # Artalk 中登记的站点名称。
   site: null
   visitor: false
   # 文章投票；评论投票使用 option.vote。
@@ -534,13 +622,17 @@ artalk:
   option: null
 
 twikoo:
+  # Twikoo 环境 ID 或部署地址，按所用部署方式填写。
   envId: null
+  # Twikoo 环境区域，可按服务端部署要求设置。
   region: null
   visitor: false
   option: null
 
 waline:
+  # Waline 服务端地址。
   serverURL: null
+  # 评论区背景图片地址。
   bg: null
   # 使用 Waline 提供当前文章的阅读量。
   pageview: false
@@ -558,11 +650,12 @@ visitor_counter:
   api_url: https://events.vercount.one/api/v2/log
   # 请求超时，单位：毫秒。
   timeout: 5000
-  # 可覆盖默认的 vercount_value_site_uv、site_pv、page_pv 元素 ID。
+  # 默认 ID 分别为 vercount_value_site_uv、vercount_value_site_pv、vercount_value_page_pv。
   element_id:
     site_uv: null
     site_pv: null
     page_pv: null
+  # 追加到各计数节点的自定义 CSS 类名。
   element_class:
     site_uv: null
     site_pv: null
@@ -597,12 +690,14 @@ preloader:
 # 页面进入动画；系统减少动态效果偏好优先。
 enter_transitions: true
 
+# 输入时的粒子与抖动效果。
 activate_power_mode:
   enable: false
   colorful: true
   shake: true
   mobile: false
 
+# 静态背景彩带。
 canvas_ribbon:
   enable: false
   size: 150
@@ -612,10 +707,12 @@ canvas_ribbon:
   click_to_change: false
   mobile: false
 
+# 动态飘带。
 canvas_fluttering_ribbon:
   enable: false
   mobile: false
 
+# 粒子连线背景。
 canvas_nest:
   enable: false
   # 线条 RGB 值，用逗号分隔，如 0,0,255。
@@ -623,22 +720,29 @@ canvas_nest:
   # 线条不透明度，范围：0–1。
   opacity: 0.7
   zIndex: -1
+  # 背景粒子数量。
   count: 99
   mobile: false
 
+# 点击烟花效果。
 fireworks:
   enable: false
   zIndex: 9999
   mobile: false
 
+# 点击爱心效果。
 click_heart:
   enable: false
   mobile: false
 
+# 点击时显示自定义文字。
 clickShowText:
   enable: false
+  # 待显示文字的数组，如 [欢迎, 阅读]。
   text: null
+  # 文字大小，单位：px。
   fontSize: 15px
+  # 随机选择文字；false 按数组顺序显示。
   random: false
   mobile: false
 
@@ -649,12 +753,13 @@ clickShowText:
 # Swup 导航、页面缓存与预加载。
 navigation:
   enable: true
+  # 缓存已获取的 HTML；预加载同时依赖此开关。
   cache: true
-  # 鼠标悬停、触摸或键盘聚焦时预加载。
+  # cache 为 true 时，在悬停、触摸或键盘聚焦链接时预加载。
   preload: true
   # 页面和脚本加载超时，单位：毫秒。
   timeout: 10000
-  # 使用完整页面跳转的站点路径列表。
+  # 精确匹配 pathname，子路径部署需含 root，如 /blog/policy/；查询参数与片段不参与比较。
   exclude: null
 
 CDN:
@@ -662,11 +767,12 @@ CDN:
   internal_provider: local
   # 第三方资源：local / jsdelivr / unpkg / cdnjs / custom。
   third_party_provider: custom
+  # 控制内置 provider 地址的版本标记；custom 模板直接按其占位符展开。
   version: false
   # 占位符：name、version、file、min_file、cdnjs_name、cdnjs_file、min_cdnjs_file。
   # 示例：https://registry.npmmirror.com/${name}/${version}/files/${file}
   custom_format: https://registry.npmmirror.com/${name}/${version}/files/${file}
-  # 按资源键覆盖地址；第三方键见 plugins.yml。
+  # 单项覆盖优先于 provider；开发模式会忽略内部资源的覆盖。第三方键见 plugins.yml。
   option:
     swup: https://cdnjs.cloudflare.com/ajax/libs/swup/4.10.0/Swup.umd.min.js
 
@@ -680,6 +786,7 @@ css_prefix: true
 # 配合站点的离线插件提供 manifest 与图标。
 pwa:
   enable: false
+  # 站点 manifest 地址；离线缓存与 Service Worker 由站点插件生成。
   manifest: null
   apple_touch_icon: null
   favicon_32_32: null
