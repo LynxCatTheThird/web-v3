@@ -45,7 +45,6 @@ social:
   fab fa-telegram: https://t.me/LynxCatTheThird/ || Telegram || '#2ca5e0'
   fas fa-rss: /rss2.xml || RSS || '#f26522'
 
-
 # 外观与布局
 # ────────────────────────────────
 
@@ -95,9 +94,9 @@ font:
   # 代码字号，如 13px；留空跟随正文基准字号。
   code_font_size: null
   # 正文 font-family 列表；字体资源需另行加载。
-  font_family: '''Noto Sans CJK SC'', ''Microsoft YaHei'', sans-serif'
+  font_family: "'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif"
   # 代码 font-family 列表，建议包含等宽字体。
-  code_font_family: '''JetBrains Mono'', ''Noto Sans CJK SC'', ''Microsoft YaHei'', sans-serif'
+  code_font_family: "'JetBrains Mono', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif"
 
 # 标题专用字体及其样式表地址。
 blog_title_font:
@@ -253,7 +252,6 @@ rightside_item_order:
 # 右侧设置按钮的旋转动效。
 rightside_config_animation: true
 
-
 # 封面与图片
 # ────────────────────────────────
 
@@ -330,7 +328,6 @@ lightbox: fancybox
 # 传给所选图片查看器的参数。
 lightbox_options: {}
 
-
 # 首页与归档
 # ────────────────────────────────
 
@@ -369,7 +366,6 @@ category_ui: null
 
 # 标签页样式：index 使用首页布局，留空使用归档布局。
 tag_ui: null
-
 
 # 文章阅读
 # ────────────────────────────────
@@ -477,7 +473,6 @@ wordcount:
   post_wordcount: true
   min2read: true
   total_wordcount: true
-
 
 # 内容渲染
 # ────────────────────────────────
@@ -609,7 +604,6 @@ chartjs:
     light: transparent
     dark: transparent
 
-
 # 搜索与评论
 # ────────────────────────────────
 
@@ -681,7 +675,6 @@ waline:
   pageview: false
   option: null
 
-
 # 统计与搜索引擎
 # ────────────────────────────────
 
@@ -718,14 +711,13 @@ Open_Graph_meta:
     # fb_admins:
     # fb_app_id:
     twitter_card: summary_large_image
-    twitter_id: '@LynxCatTheThird'
+    twitter_id: "@LynxCatTheThird"
 
 structured_data:
   enable: true
   # 站点别名数组，用于结构化数据。
   alternate_name:
     # - 我的博客
-
 
 # 动效与加载
 # ────────────────────────────────
@@ -798,7 +790,6 @@ clickShowText:
   random: false
   mobile: false
 
-
 # 导航与资源
 # ────────────────────────────────
 
@@ -847,7 +838,7 @@ CDN:
     # main_css:
 
     # 导航依赖
-    swup: "https://cdnjs.cloudflare.com/ajax/libs/swup/4.10.0/Swup.umd.min.js"
+    swup: "https://s4.zstatic.net/ajax/libs/swup/4.10.0/Swup.umd.min.js"
     # swup_head:
     # swup_preload:
     # swup_a11y:
@@ -877,7 +868,7 @@ CDN:
     # medium_zoom:
     # lazyload:
     # egjs_infinitegrid:
-    # fontawesome: https://cdn.example.com/fontawesome/css/all.min.css
+    # fontawesome:
     # prismjs_js:
     # prismjs_autoloader:
     # prismjs_lineNumber_js:
@@ -896,7 +887,6 @@ CDN:
 
 # 通过 Stylus 添加浏览器样式前缀。
 css_prefix: true
-
 
 # 应用与扩展
 # ────────────────────────────────
