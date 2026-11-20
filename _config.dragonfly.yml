@@ -902,7 +902,6 @@ pwa:
 # head 在 </head> 前注入，bottom 在 </body> 前注入。
 inject:
   head:
-    - <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     - <link rel="stylesheet" href="/css/custom.css">
     - >-
       <link rel="stylesheet"
