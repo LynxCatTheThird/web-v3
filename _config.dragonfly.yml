@@ -30,9 +30,7 @@ menu:
   时间线: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  交流||fas fa-list:
-    友链: /link/ || fas fa-link
-    留言板: /comment/ || fas fa-share-nodes
+  友链: /link/ || fas fa-link
   关于||fas fa-list:
     关于我: /about/ || fas fa-user
     条款与政策: /policy/ || fas fa-envelope-open-text

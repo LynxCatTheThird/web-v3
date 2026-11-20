@@ -4,34 +4,22 @@
 
 # 站点信息
 # ────────────────────────────────
-
 title: 猫说 Meow
-
 subtitle: ''
-
 description: I am LynxCatTheThird, an AGI from the 103rd century.
-
 keywords: null
-
 author: LynxCatTheThird
-
 language: zh-CN
-
 timezone: Asia/Shanghai
-
 # 主题选项写入 _config.dragonfly.yml。
 theme: dragonfly
 
-
 # 地址与路由
 # ────────────────────────────────
-
 # 填写站点的完整公开地址；子路径部署时同步配置 root。
 url: https://www.lynx3.me/
-
 # 文章路径模板；现有链接格式会影响外部引用。
 permalink: article/:abbrlink/
-
 permalink_defaults: null
 
 # 控制链接末尾的 index.html 和 .html。
@@ -39,46 +27,31 @@ pretty_urls:
   trailing_index: true
   trailing_html: true
 
-
 # 内容目录
 # ────────────────────────────────
-
 source_dir: source
-
 public_dir: public
-
 tag_dir: tags
-
 archive_dir: archives
-
 category_dir: categories
-
 code_dir: downloads/code
-
 i18n_dir: :lang
 
 # 直接复制到输出目录的文件模式。
 skip_render: null
-
 # 相对于 source 目录的额外收录规则。
 include: null
-
 # 相对于 source 目录的排除规则。
 exclude: null
-
 # 构建时忽略的文件模式。
 ignore:
   - '**/push.sh'
 
-
 # 文章与渲染
 # ────────────────────────────────
-
 # 新文章文件名模板。
 new_post_name: :title.md
-
 default_layout: post
-
 titlecase: false
 
 # 外部链接的打开方式与作用范围。
@@ -88,18 +61,13 @@ external_link:
   exclude: ''
 
 filename_case: 0
-
 render_drafts: false
-
 post_asset_folder: false
-
 relative_link: false
-
 future: true
 
 # 代码高亮引擎，与主题代码块外观分开配置。
 syntax_highlighter: highlight.js
-
 highlight:
   line_number: true
   auto_detect: true
@@ -112,10 +80,8 @@ prismjs:
   line_number: true
   tab_replace: ''
 
-
 # 首页与归档
 # ────────────────────────────────
-
 # 首页路径、每页文章数与排序。
 index_generator:
   path: ''
@@ -123,27 +89,20 @@ index_generator:
   order_by: -date
 
 default_category: uncategorized
-
 category_map: null
-
 tag_map: null
 
 date_format: YYYY-MM-DD
-
 time_format: HH:mm:ss
-
 # 更新时间来源：mtime / date / empty。
 updated_option: mtime
 
 # 分页大小，0 表示不分页。
 per_page: 10
-
 pagination_dir: page
-
 
 # 链接与搜索
 # ────────────────────────────────
-
 # 文章短链接插件，保留既有 ID 可避免旧地址失效。
 abbrlink:
   alg: crc32
@@ -169,10 +128,8 @@ search:
   content: true
   format: html
 
-
 # 内容分发与优化
 # ────────────────────────────────
-
 meta_generator: true
 
 sitemap:
@@ -239,10 +196,8 @@ encrypt:
   kdf:
     iterations: 600000
 
-
 # 部署
 # ────────────────────────────────
-
 # 部署插件与目标配置。
 deploy:
   - type: git
